@@ -1,0 +1,64 @@
+﻿<UserControl
+    x:Class="Colibri.Controls.AttachmentUploadVideoControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:behaviors="using:Colibri.Behaviors"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400"
+    x:Name="rootElement"
+    Unloaded="AttachmentUploadDocumentControl_OnUnloaded">
+
+    <Grid Background="Black" Width="90" Height="70" Margin="0,0,5,0">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="CommonStates">
+                <VisualState x:Name="DefaultState" />
+
+                <VisualState x:Name="UploadingState">
+                    <Storyboard>
+                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="rootElement">
+                            <DiscreteDoubleKeyFrame KeyTime="0" Value="0.4"/>
+                        </DoubleAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LoadingIndicator" Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Visible"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LoadingIndicator" Storyboard.TargetProperty="IsActive">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="True"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+                <VisualState x:Name="UploadedState">
+                    <Storyboard>
+                        <DoubleAnimation Storyboard.TargetProperty="Opacity" Storyboard.TargetName="rootElement" To="1" Duration="0:0:0.3"/>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <interactivity:Interaction.Behaviors>
+            <interactivity:BehaviorCollection>
+                <behaviors:ContextMenuBehavior />
+            </interactivity:BehaviorCollection>
+        </interactivity:Interaction.Behaviors>
+        <FlyoutBase.AttachedFlyout>
+            <MenuFlyout>
+                <MenuFlyoutItem x:Uid="ContextMenuRemove" Text="~Remove" Click="ContextMenuRemoveClick"/>
+            </MenuFlyout>
+        </FlyoutBase.AttachedFlyout>
+        
+        <Rectangle Fill="{ThemeResource ApplicationForegroundThemeBrush}" Stroke="{ThemeResource ApplicationForegroundThemeBrush}" Opacity="0.1" />
+
+        <TextBlock Text="" FontFamily="{StaticResource SymbolThemeFontFamily}" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <Image x:Name="Photo" Source="{Binding Attachment.VkVideo.Photo320, ElementName=rootElement}" Stretch="Uniform"/>
+
+        <TextBlock x:Name="DurationTextBlock" Text="{Binding  Attachment.VkVideo.Duration, ElementName=rootElement, Converter={StaticResource AudioTimeConverter}}" VerticalAlignment="Bottom" Margin="0,0,5,5" FontSize="10" HorizontalAlignment="Right" Opacity="0.7"/>
+
+        <ProgressRing x:Name="LoadingIndicator" Visibility="Collapsed"/>
+
+        <Button Style="{StaticResource IconButtonStyle}" Content="" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="8" Click="ContextMenuRemoveClick"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,77 @@
+﻿<Page
+    x:Class="Colibri.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModel="using:Colibri.ViewModel"
+    xmlns:commonConverters="using:Jupiter.Converters"
+    xmlns:debugData="using:Colibri.DebugData"
+    xmlns:converters="using:Colibri.Converters"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:commonControls="using:Jupiter.Controls"
+    mc:Ignorable="d"
+    d:DesignWidth="1024"
+    NavigationCacheMode="Required">
+
+    <Page.DataContext>
+        <viewModel:DialogsViewModel />
+    </Page.DataContext>
+
+    <Page.Resources>
+        <commonConverters:BooleanToObjectConverter x:Key="IsReadBrushConverter"
+                                                  FalseObject="{StaticResource SystemControlForegroundAccentBrush}"
+                                                  TrueObject="{StaticResource DialogNormalForegroundBrush}"/>
+
+
+        <converters:MessageItemTemplateSelector x:Key="MessageItemTemplateSelector"
+                                                InboxTemplate="{StaticResource MessageInboxTemplate}"
+                                                OutboxTemplate="{StaticResource MessageOutboxTemplate}" />
+
+        <converters:ListItemClickArgsConverter x:Key="ListItemClickArgsConverter"/>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+
+        <TextBlock x:Uid="DialogsTitle" Text="~DIALOGS" Margin="10,10,10,10" FontWeight="SemiBold" FontSize="14" Typography.Capitals="SmallCaps"/>
+
+        <commonControls:LoadingIndicator  Grid.Row="1" IsBusy="{Binding Operations[dialogs].IsWorking}" Error="{Binding Operations[dialogs].Error}">
+            <ListView d:DataContext="{d:DesignInstance debugData:DebugDialogsViewModel}" ItemsSource="{Binding Dialogs}"
+                  ItemTemplateSelector="{StaticResource DialogTemplateSelector}"
+                  BorderBrush="{ThemeResource SystemControlBackgroundChromeMediumBrush}" BorderThickness="0,0,1,0" Padding="0,10,0,0"
+                  ShowsScrollingPlaceholders="False" IsItemClickEnabled="True"
+                  SelectionMode="None" SelectedItem="{Binding SelectedDialog, Mode=TwoWay}">
+
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="ItemClick">
+                        <core:InvokeCommandAction Command="{Binding GoToDialogCommand, Mode=OneWay}" InputConverter="{StaticResource ListItemClickArgsConverter}"/>
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="Padding" Value="0" />
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>
+        </commonControls:LoadingIndicator>
+
+        <CommandBar Grid.Row="2">
+            <AppBarButton x:Uid="AppbarButtonNewDialog" Icon="Add" Label="~New" Command="{Binding Main.GoToContactsCommand, Source={StaticResource Locator}}"/>
+            <AppBarButton x:Uid="AppbarButtonRefresh" Icon="Refresh" Label="~Refresh" Command="{Binding RefreshCommand}"/>
+            <!--<AppBarButton x:Uid="AppbarButtonSearch" Icon="Find" Label="~Search" IsEnabled="False"/>-->
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:Uid="AppbarButtonSettings" Label="~Settings" Command="{Binding Main.GoToSettingsCommand, Source={StaticResource Locator}}"/>
+                <AppBarButton x:Uid="AppbarButtonSignOut" Label="~Sign out" Command="{Binding Main.SignOutCommand, Source={StaticResource Locator}}"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Grid>
+</Page>

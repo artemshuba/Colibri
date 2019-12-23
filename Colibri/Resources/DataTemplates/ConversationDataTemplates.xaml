@@ -1,0 +1,39 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:Colibri.Controls"
+    x:Class="Colibri.Resources.DataTemplates.ConversationDataTemplates">
+
+    <!-- Inbox message bubble template -->
+    <DataTemplate x:Key="MessageInboxTemplate">
+        <Grid Margin="0,0,0,5" HorizontalAlignment="Left">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="0.85*"/>
+                <ColumnDefinition Width="0.15*"/>
+            </Grid.ColumnDefinitions>
+            <controls:AvatarControl Avatar="{Binding Sender.Photo}" Width="30" Height="30" HorizontalAlignment="Left" Margin="0,0,17,0" VerticalAlignment="Top" 
+                                    ToolTipService.ToolTip="{Binding Sender.Name}"/>
+            <Grid Grid.Column="1" Background="{StaticResource ConversationInboxMessageBackgroundBrush}" Padding="12,10,12,5">
+                <controls:MessageControl Message="{Binding}"/>
+            </Grid>
+            <Path Grid.Column="1" Width="12" Height="15" Data="M0,0 L-12,0 L0,15 Z" Fill="{StaticResource ConversationInboxMessageBackgroundBrush}" Stretch="Fill" Margin="-12,15,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        </Grid>
+    </DataTemplate>
+
+    <!-- Outbox message bubble template -->
+    <DataTemplate x:Key="MessageOutboxTemplate">
+        <Grid Margin="0,0,0,5" HorizontalAlignment="Right">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.15*"/>
+                <ColumnDefinition Width="0.85*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1" Background="{StaticResource ConversationOutboxMessageBackgroundBrush}" Padding="12,10,12,5">
+                <controls:MessageControl Message="{Binding}"/>
+            </Grid>
+            <Path Grid.Column="1" Width="12" Height="15" Data="M0,0 L12,0 L0,-15 Z" Fill="{StaticResource ConversationOutboxMessageBackgroundBrush}" Stretch="Fill" Margin="0,0,-11,15" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+            <controls:AvatarControl Grid.Column="2" Avatar="{Binding Main.CurrentUser.Photo, Source={StaticResource Locator}}" Width="30" Height="30" HorizontalAlignment="Right" Margin="17,0,0,0" VerticalAlignment="Bottom" />
+        </Grid>
+    </DataTemplate>
+</ResourceDictionary>

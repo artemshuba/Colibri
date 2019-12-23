@@ -1,0 +1,16 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="DialogNormalForegroundBrush" 
+                     Color="{ThemeResource SystemAccentColor}" Opacity="0.7"/>
+
+    <SolidColorBrush x:Key="ConversationInboxMessageBackgroundBrush" Color="{ThemeResource SystemAccentColor}" Opacity="0.5"/>
+    <SolidColorBrush x:Key="ConversationOutboxMessageBackgroundBrush" Color="{ThemeResource SystemAccentColor}"/>
+
+    <SolidColorBrush x:Key="ConversationInboxMessageForegroundBrush" Color="{ThemeResource SystemBaseHighColor}" Opacity="0.8"/>
+    <SolidColorBrush x:Key="ConversationOutboxMessageForegroundBrush" Color="White"/>
+
+    <SolidColorBrush x:Key="ConversationOutboxHyperlinkForegroundBrush" Color="{ThemeResource SystemAltMediumColor}"/>
+    <SolidColorBrush x:Key="ConversationInboxHyperlinkForegroundBrush" Color="{ThemeResource SystemChromeBlackMediumLowColor}"/>
+</ResourceDictionary>

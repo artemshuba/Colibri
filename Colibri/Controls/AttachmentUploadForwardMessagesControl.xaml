@@ -1,0 +1,36 @@
+﻿<UserControl
+    x:Class="Colibri.Controls.AttachmentUploadForwardMessagesControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:behaviors="using:Colibri.Behaviors"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400"
+    x:Name="rootElement"
+    Unloaded="AttachmentUploadForwardMessagesControl_OnUnloaded">
+
+    <Grid Background="Black" Width="70" Height="70" Margin="0,0,5,0">
+        <interactivity:Interaction.Behaviors>
+            <interactivity:BehaviorCollection>
+                <behaviors:ContextMenuBehavior />
+            </interactivity:BehaviorCollection>
+        </interactivity:Interaction.Behaviors>
+        <FlyoutBase.AttachedFlyout>
+            <MenuFlyout>
+                <MenuFlyoutItem x:Uid="ContextMenuRemove" Text="~Remove" Click="ContextMenuRemoveClick"/>
+            </MenuFlyout>
+        </FlyoutBase.AttachedFlyout>
+
+        <Rectangle Fill="{ThemeResource ApplicationForegroundThemeBrush}" Stroke="{ThemeResource ApplicationForegroundThemeBrush}" Opacity="0.1" />
+
+        <StackPanel HorizontalAlignment="Center" Margin="5">
+            <TextBlock Text="{Binding Attachment.Messages.Count, ElementName=rootElement}" HorizontalAlignment="Center" FontSize="28" FontWeight="SemiLight"/>
+            <TextBlock x:Name="MessagesCountTitle" Text="~message" HorizontalAlignment="Center" FontSize="12"/>
+        </StackPanel>
+
+        <Button Style="{StaticResource IconButtonStyle}" Content="" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="8" Click="ContextMenuRemoveClick"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,111 @@
+﻿<Page
+    x:Class="Colibri.View.NewDialogView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModel="using:Colibri.ViewModel"
+    xmlns:users="using:VkLib.Core.Users"
+    xmlns:controls="using:Colibri.Controls"
+    xmlns:commonControls="using:Jupiter.Controls"
+    mc:Ignorable="d"
+    x:Name="rootElement">
+
+    <Page.DataContext>
+        <viewModel:NewDialogViewModel />
+    </Page.DataContext>
+
+    <Page.Resources>
+        <DataTemplate x:Key="UserTemplate" x:DataType="users:VkProfile">
+            <Button Style="{StaticResource SimpleButtonStyle}" Command="{Binding ElementName=rootElement, Path=DataContext.StartChatCommand}"
+                    CommandParameter="{Binding}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Border x:Name="UserPhoto" Background="LightGray" Width="45" Height="45" Margin="0,0,0,0" CornerRadius="25">
+                        <controls:AvatarControl Avatar="{x:Bind Photo}"/>
+                    </Border>
+
+                    <Ellipse Width="12" Height="12" Fill="{ThemeResource SystemControlForegroundAccentBrush}" Stroke="White" StrokeThickness="2"
+                     Visibility="{Binding IsOnline, Converter={StaticResource BoolToVisibilityConverter}}"
+                     Margin="-15,-15,0,0" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+
+                    <TextBlock Grid.Column="1" Text="{x:Bind Name}" FontWeight="Normal"
+                               TextWrapping="WrapWholeWords" Margin="10,0,0,0" FontSize="16" MaxLines="2" Opacity="0.7" VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
+        </DataTemplate>
+
+        <DataTemplate x:Key="SuggestionUserTemplate" x:DataType="users:VkProfile">
+            <Grid Margin="0,5,0,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Border x:Name="UserPhoto" Background="LightGray" Width="45" Height="45" Margin="0,0,0,0" CornerRadius="25">
+                    <controls:AvatarControl Avatar="{x:Bind Photo}"/>
+                </Border>
+
+                <TextBlock Grid.Column="1" Text="{x:Bind Name}" FontWeight="Normal"
+                               TextWrapping="WrapWholeWords" Margin="10,0,0,0" FontSize="16" MaxLines="2" Opacity="0.7" VerticalAlignment="Center"/>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <commonControls:LoadingIndicator IsBusy="{Binding Operations[users].IsWorking}" Error="{Binding Operations[users].Error}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <AutoSuggestBox x:Uid="NewDialogSearchBox" Text="{Binding SearchQuery, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" PlaceholderText="~Search" Grid.Row="0" Margin="10,10,10,10"
+                                ItemsSource="{Binding SearchResults}" ItemTemplate="{StaticResource SuggestionUserTemplate}" SuggestionChosen="AutoSuggestBox_OnSuggestionChosen" QueryIcon="Find"
+                                TextBoxStyle="{StaticResource AutoSuggestBoxTextBoxStyle}"/>
+
+                <ComboBox x:Uid="NewDialogSortComboBox" Grid.Row="1" Style="{StaticResource ToolbarComboBoxStyle}" Header="~Sort by:" SelectedIndex="{Binding SelectedSortTypeIndex, Mode=TwoWay}" Margin="10,0,0,10">
+                    <ComboBoxItem x:Uid="NewDialogSortByHints" Content="~Popularity"/>
+                    <ComboBoxItem x:Uid="NewDialogSortByFirstName" Content="~First name"/>
+                    <ComboBoxItem x:Uid="NewDialogSortByLastName" Content="~Last name"/>
+                </ComboBox>
+
+                <SemanticZoom Grid.Row="2">
+                    <SemanticZoom.ZoomedOutView>
+                        <GridView x:Name="ZoomOutListView" ItemsSource="{Binding FriendsCollection.View.CollectionGroups}"
+                                 ItemTemplate="{StaticResource SemanticZoomOutItemTemplate}" HorizontalContentAlignment="Center" VerticalAlignment="Center" Style="{StaticResource ZoomOutGridViewStyle}">
+                            <GridView.ItemContainerStyle>
+                                <Style TargetType="GridViewItem">
+                                    <Setter Property="Margin" Value="10,10,10,10"/>
+                                </Style>
+                            </GridView.ItemContainerStyle>
+                        </GridView>
+                    </SemanticZoom.ZoomedOutView>
+                    <SemanticZoom.ZoomedInView>
+                        <ListView ItemsSource="{Binding FriendsCollection.View}" SelectionMode="None" ItemTemplate="{StaticResource UserTemplate}" ShowsScrollingPlaceholders="False">
+                            <ListView.ItemContainerStyle>
+                                <Style TargetType="ListViewItem">
+                                    <Setter Property="Margin" Value="0,0,0,10"/>
+                                    <Setter Property="Padding" Value="10,5,10,5" />
+                                </Style>
+                            </ListView.ItemContainerStyle>
+                            <ListView.GroupStyle>
+                                <GroupStyle HidesIfEmpty="True" HeaderContainerStyle="{StaticResource CommonListViewGroupHeaderItemStyle}">
+                                    <GroupStyle.HeaderTemplate>
+                                        <DataTemplate>
+                                            <Border>
+                                                <TextBlock Text="{Binding Key}" FontSize="18" FontWeight="SemiBold" Width="42" HorizontalAlignment="Left" TextAlignment="Center"/>
+                                            </Border>
+                                        </DataTemplate>
+                                    </GroupStyle.HeaderTemplate>
+                                </GroupStyle>
+                            </ListView.GroupStyle>
+                        </ListView>
+                    </SemanticZoom.ZoomedInView>
+                </SemanticZoom>
+            </Grid>
+        </commonControls:LoadingIndicator>
+    </Grid>
+</Page>

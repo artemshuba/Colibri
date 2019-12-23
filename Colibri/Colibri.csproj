@@ -1,0 +1,2133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{B0345B62-25A9-40D2-8211-B9E2B087E067}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Colibri</RootNamespace>
+    <AssemblyName>Colibri</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.17134.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.14393.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>Colibri_StoreKey.pfx</PackageCertificateKeyFile>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PackageCertificateThumbprint>CF924BACDC7B90F9C8B4C6D7B4701933628F0A99</PackageCertificateThumbprint>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
+    <RuntimeIdentifiers>win10-arm;win10-arm-aot;win10-x86;win10-x86-aot;win10-x64;win10-x64-aot</RuntimeIdentifiers>
+    <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
+    <AppInstallerUpdateFrequency>1</AppInstallerUpdateFrequency>
+    <AppInstallerCheckForUpdateFrequency>OnApplicationRun</AppInstallerCheckForUpdateFrequency>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS;CODE_ANALYSIS;CODE_ANALYSIS;CODE_ANALYSIS;CODE_ANALYSIS;CODE_ANALYSIS;CODE_ANALYSIS</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\BadgeLogo.scale-200.png" />
+    <Content Include="Assets\send.png" />
+    <Content Include="Resources\Images\Smiles\1X\002320E3.png" />
+    <Content Include="Resources\Images\Smiles\1X\003020E3.png" />
+    <Content Include="Resources\Images\Smiles\1X\003120E3.png" />
+    <Content Include="Resources\Images\Smiles\1X\003220E3.png" />
+    <Content Include="Resources\Images\Smiles\1X\003320E3.png" />
+    <Content Include="Resources\Images\Smiles\1X\003420E3.png" />
+    <Content Include="Resources\Images\Smiles\1X\003520E3.png" />
+    <Content Include="Resources\Images\Smiles\1X\003620E3.png" />
+    <Content Include="Resources\Images\Smiles\1X\003720E3.png" />
+    <Content Include="Resources\Images\Smiles\1X\003820E3.png" />
+    <Content Include="Resources\Images\Smiles\1X\003920E3.png" />
+    <Content Include="Resources\Images\Smiles\1X\00A9.png" />
+    <Content Include="Resources\Images\Smiles\1X\00AE.png" />
+    <Content Include="Resources\Images\Smiles\1X\203C.png" />
+    <Content Include="Resources\Images\Smiles\1X\2049.png" />
+    <Content Include="Resources\Images\Smiles\1X\2122.png" />
+    <Content Include="Resources\Images\Smiles\1X\2139.png" />
+    <Content Include="Resources\Images\Smiles\1X\2194.png" />
+    <Content Include="Resources\Images\Smiles\1X\2195.png" />
+    <Content Include="Resources\Images\Smiles\1X\2196.png" />
+    <Content Include="Resources\Images\Smiles\1X\2197.png" />
+    <Content Include="Resources\Images\Smiles\1X\2198.png" />
+    <Content Include="Resources\Images\Smiles\1X\2199.png" />
+    <Content Include="Resources\Images\Smiles\1X\21A9.png" />
+    <Content Include="Resources\Images\Smiles\1X\21AA.png" />
+    <Content Include="Resources\Images\Smiles\1X\231A.png" />
+    <Content Include="Resources\Images\Smiles\1X\231B.png" />
+    <Content Include="Resources\Images\Smiles\1X\23E9.png" />
+    <Content Include="Resources\Images\Smiles\1X\23EA.png" />
+    <Content Include="Resources\Images\Smiles\1X\23EB.png" />
+    <Content Include="Resources\Images\Smiles\1X\23EC.png" />
+    <Content Include="Resources\Images\Smiles\1X\23F0.png" />
+    <Content Include="Resources\Images\Smiles\1X\23F3.png" />
+    <Content Include="Resources\Images\Smiles\1X\24C2.png" />
+    <Content Include="Resources\Images\Smiles\1X\25AA.png" />
+    <Content Include="Resources\Images\Smiles\1X\25AB.png" />
+    <Content Include="Resources\Images\Smiles\1X\25B6.png" />
+    <Content Include="Resources\Images\Smiles\1X\25C0.png" />
+    <Content Include="Resources\Images\Smiles\1X\25FB.png" />
+    <Content Include="Resources\Images\Smiles\1X\25FC.png" />
+    <Content Include="Resources\Images\Smiles\1X\25FD.png" />
+    <Content Include="Resources\Images\Smiles\1X\25FE.png" />
+    <Content Include="Resources\Images\Smiles\1X\2600.png" />
+    <Content Include="Resources\Images\Smiles\1X\2601.png" />
+    <Content Include="Resources\Images\Smiles\1X\260E.png" />
+    <Content Include="Resources\Images\Smiles\1X\2611.png" />
+    <Content Include="Resources\Images\Smiles\1X\2614.png" />
+    <Content Include="Resources\Images\Smiles\1X\2615.png" />
+    <Content Include="Resources\Images\Smiles\1X\261D.png" />
+    <Content Include="Resources\Images\Smiles\1X\263A.png" />
+    <Content Include="Resources\Images\Smiles\1X\2648.png" />
+    <Content Include="Resources\Images\Smiles\1X\2649.png" />
+    <Content Include="Resources\Images\Smiles\1X\264A.png" />
+    <Content Include="Resources\Images\Smiles\1X\264B.png" />
+    <Content Include="Resources\Images\Smiles\1X\264C.png" />
+    <Content Include="Resources\Images\Smiles\1X\264D.png" />
+    <Content Include="Resources\Images\Smiles\1X\264E.png" />
+    <Content Include="Resources\Images\Smiles\1X\264F.png" />
+    <Content Include="Resources\Images\Smiles\1X\2650.png" />
+    <Content Include="Resources\Images\Smiles\1X\2651.png" />
+    <Content Include="Resources\Images\Smiles\1X\2652.png" />
+    <Content Include="Resources\Images\Smiles\1X\2653.png" />
+    <Content Include="Resources\Images\Smiles\1X\2660.png" />
+    <Content Include="Resources\Images\Smiles\1X\2663.png" />
+    <Content Include="Resources\Images\Smiles\1X\2665.png" />
+    <Content Include="Resources\Images\Smiles\1X\2666.png" />
+    <Content Include="Resources\Images\Smiles\1X\2668.png" />
+    <Content Include="Resources\Images\Smiles\1X\267B.png" />
+    <Content Include="Resources\Images\Smiles\1X\267F.png" />
+    <Content Include="Resources\Images\Smiles\1X\2693.png" />
+    <Content Include="Resources\Images\Smiles\1X\26A0.png" />
+    <Content Include="Resources\Images\Smiles\1X\26A1.png" />
+    <Content Include="Resources\Images\Smiles\1X\26AA.png" />
+    <Content Include="Resources\Images\Smiles\1X\26AB.png" />
+    <Content Include="Resources\Images\Smiles\1X\26BD.png" />
+    <Content Include="Resources\Images\Smiles\1X\26BE.png" />
+    <Content Include="Resources\Images\Smiles\1X\26C4.png" />
+    <Content Include="Resources\Images\Smiles\1X\26C5.png" />
+    <Content Include="Resources\Images\Smiles\1X\26CE.png" />
+    <Content Include="Resources\Images\Smiles\1X\26D4.png" />
+    <Content Include="Resources\Images\Smiles\1X\26EA.png" />
+    <Content Include="Resources\Images\Smiles\1X\26F2.png" />
+    <Content Include="Resources\Images\Smiles\1X\26F3.png" />
+    <Content Include="Resources\Images\Smiles\1X\26F5.png" />
+    <Content Include="Resources\Images\Smiles\1X\26FA.png" />
+    <Content Include="Resources\Images\Smiles\1X\26FD.png" />
+    <Content Include="Resources\Images\Smiles\1X\2702.png" />
+    <Content Include="Resources\Images\Smiles\1X\2705.png" />
+    <Content Include="Resources\Images\Smiles\1X\2708.png" />
+    <Content Include="Resources\Images\Smiles\1X\2709.png" />
+    <Content Include="Resources\Images\Smiles\1X\270A.png" />
+    <Content Include="Resources\Images\Smiles\1X\270B.png" />
+    <Content Include="Resources\Images\Smiles\1X\270C.png" />
+    <Content Include="Resources\Images\Smiles\1X\270F.png" />
+    <Content Include="Resources\Images\Smiles\1X\2712.png" />
+    <Content Include="Resources\Images\Smiles\1X\2714.png" />
+    <Content Include="Resources\Images\Smiles\1X\2716.png" />
+    <Content Include="Resources\Images\Smiles\1X\2728.png" />
+    <Content Include="Resources\Images\Smiles\1X\2733.png" />
+    <Content Include="Resources\Images\Smiles\1X\2734.png" />
+    <Content Include="Resources\Images\Smiles\1X\2744.png" />
+    <Content Include="Resources\Images\Smiles\1X\2747.png" />
+    <Content Include="Resources\Images\Smiles\1X\274C.png" />
+    <Content Include="Resources\Images\Smiles\1X\274E.png" />
+    <Content Include="Resources\Images\Smiles\1X\2753.png" />
+    <Content Include="Resources\Images\Smiles\1X\2754.png" />
+    <Content Include="Resources\Images\Smiles\1X\2755.png" />
+    <Content Include="Resources\Images\Smiles\1X\2757.png" />
+    <Content Include="Resources\Images\Smiles\1X\2764.png" />
+    <Content Include="Resources\Images\Smiles\1X\2795.png" />
+    <Content Include="Resources\Images\Smiles\1X\2796.png" />
+    <Content Include="Resources\Images\Smiles\1X\2797.png" />
+    <Content Include="Resources\Images\Smiles\1X\27A1.png" />
+    <Content Include="Resources\Images\Smiles\1X\27B0.png" />
+    <Content Include="Resources\Images\Smiles\1X\27BF.png" />
+    <Content Include="Resources\Images\Smiles\1X\2934.png" />
+    <Content Include="Resources\Images\Smiles\1X\2935.png" />
+    <Content Include="Resources\Images\Smiles\1X\2B05.png" />
+    <Content Include="Resources\Images\Smiles\1X\2B06.png" />
+    <Content Include="Resources\Images\Smiles\1X\2B07.png" />
+    <Content Include="Resources\Images\Smiles\1X\2B1B.png" />
+    <Content Include="Resources\Images\Smiles\1X\2B1C.png" />
+    <Content Include="Resources\Images\Smiles\1X\2B50.png" />
+    <Content Include="Resources\Images\Smiles\1X\2B55.png" />
+    <Content Include="Resources\Images\Smiles\1X\3030.png" />
+    <Content Include="Resources\Images\Smiles\1X\303D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDC04.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDCCF.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDD70.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDD71.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDD7E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDD7F.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDD8E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDD91.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDD92.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDD93.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDD94.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDD95.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDD96.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDD97.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDD98.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDD99.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDD9A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDDE8D83CDDF3.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDDE9D83CDDEA.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDDEAD83CDDF8.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDDEBD83CDDF7.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDDECD83CDDE7.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDDEED83CDDF9.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDDEFD83CDDF5.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDDF0D83CDDF7.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDDF7D83CDDFA.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDDFAD83CDDF8.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDE01.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF00.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF01.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF02.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF03.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF04.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF05.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF06.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF07.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF08.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF09.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF0A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF0B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF0C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF0D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF0E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF0F.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF10.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF11.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF12.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF13.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF14.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF15.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF16.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF17.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF18.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF19.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF1A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF1B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF1C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF1D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF1E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF1F.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF20.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF30.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF31.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF32.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF33.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF34.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF35.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF37.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF38.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF39.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF3A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF3B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF3C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF3D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF3E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF3F.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF40.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF41.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF42.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF43.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF44.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF45.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF46.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF47.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF48.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF49.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF4A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF4B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF4C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF4D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF4E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF4F.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF50.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF51.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF52.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF53.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF54.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF55.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF56.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF57.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF58.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF59.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF5A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF5B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF5C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF5D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF5E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF5F.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF60.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF61.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF62.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF63.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF64.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF65.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF66.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF67.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF68.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF69.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF6A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF6B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF6C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF6D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF6E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF6F.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF70.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF71.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF72.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF73.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF74.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF75.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF76.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF77.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF78.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF79.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF7A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF7B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF7C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF80.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF81.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF82.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF83.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF84.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF85.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF86.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF87.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF88.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF89.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF8A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF8B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF8C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF8D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF8E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF8F.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF90.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF91.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF92.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDF93.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFA0.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFA1.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFA2.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFA3.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFA4.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFA5.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFA6.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFA7.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFA8.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFA9.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFAA.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFAB.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFAC.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFAD.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFAE.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFAF.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFB0.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFB1.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFB2.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFB3.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFB4.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFB5.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFB6.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFB7.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFB8.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFB9.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFBA.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFBB.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFBC.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFBD.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFBE.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFBF.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFC0.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFC1.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFC2.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFC3.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFC4.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFC6.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFC7.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFC8.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFC9.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFCA.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFE0.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFE1.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFE2.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFE3.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFE4.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFE5.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFE6.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFE7.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFE8.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFE9.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFEA.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFEB.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFEC.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFED.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFEE.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFEF.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83CDFF0.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC00.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC01.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC02.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC03.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC04.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC05.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC06.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC07.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC08.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC09.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC0A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC0B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC0C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC0D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC0E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC0F.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC10.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC11.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC12.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC13.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC14.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC15.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC16.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC17.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC18.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC19.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC1A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC1B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC1C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC1D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC1E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC1F.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC20.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC21.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC22.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC23.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC24.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC25.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC26.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC27.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC28.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC29.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC2A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC2B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC2C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC2D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC2E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC2F.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC30.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC31.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC32.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC33.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC34.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC35.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC36.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC37.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC38.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC39.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC3A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC3B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC3C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC3D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC3E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC40.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC42.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC43.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC44.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC45.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC46.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC47.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC48.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC49.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC4A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC4B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC4C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC4D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC4E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC4F.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC50.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC51.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC52.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC53.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC54.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC55.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC56.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC57.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC58.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC59.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC5A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC5B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC5C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC5D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC5E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC5F.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC60.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC61.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC62.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC63.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC64.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC65.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC66.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC67.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC68.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC69.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC6A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC6B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC6C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC6D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC6E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC6F.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC70.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC71.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC72.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC73.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC74.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC75.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC76.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC77.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC78.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC79.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC7A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC7B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC7C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC7D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC7E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC7F.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC80.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC81.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC82.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC83.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC84.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC85.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC86.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC87.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC88.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC89.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC8A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC8B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC8C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC8D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC8E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC8F.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC90.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC91.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC92.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC93.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC94.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC95.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC96.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC97.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC98.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC99.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC9A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC9B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC9C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC9D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC9E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDC9F.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCA0.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCA1.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCA2.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCA3.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCA4.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCA5.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCA6.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCA7.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCA8.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCA9.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCAA.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCAB.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCAC.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCAD.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCAE.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCAF.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCB0.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCB1.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCB2.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCB3.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCB4.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCB5.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCB6.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCB7.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCB8.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCB9.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCBA.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCBB.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCBC.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCBD.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCBE.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCBF.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCC0.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCC1.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCC2.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCC3.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCC4.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCC5.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCC6.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCC7.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCC8.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCC9.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCCA.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCCB.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCCC.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCCD.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCCE.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCCF.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCD0.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCD1.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCD2.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCD3.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCD4.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCD5.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCD6.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCD7.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCD8.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCD9.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCDA.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCDB.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCDC.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCDD.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCDE.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCDF.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCE0.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCE1.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCE2.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCE3.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCE4.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCE5.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCE6.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCE7.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCE8.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCE9.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCEA.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCEB.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCEC.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCED.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCEE.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCEF.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCF0.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCF1.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCF2.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCF3.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCF4.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCF5.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCF6.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCF7.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCF9.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCFA.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCFB.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDCFC.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD00.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD01.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD02.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD03.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD04.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD05.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD06.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD07.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD08.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD09.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD0A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD0B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD0C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD0D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD0E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD0F.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD10.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD11.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD12.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD13.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD14.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD15.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD16.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD17.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD18.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD19.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD1A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD1B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD1C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD1D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD1E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD1F.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD20.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD21.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD22.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD23.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD24.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD25.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD26.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD27.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD28.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD29.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD2A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD2B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD2C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD2D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD2E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD2F.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD30.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD31.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD32.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD33.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD34.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD35.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD36.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD37.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD38.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD39.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD3A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD3B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD3C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDD3D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDDFB.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDDFC.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDDFD.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDDFE.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDDFF.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE00.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE01.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE02.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE03.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE04.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE05.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE06.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE07.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE08.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE09.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE0A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE0B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE0C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE0D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE0E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE0F.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE10.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE11.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE12.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE13.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE14.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE15.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE16.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE17.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE18.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE19.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE1A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE1B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE1C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE1D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE1E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE1F.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE20.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE21.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE22.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE23.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE24.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE25.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE26.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE27.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE28.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE29.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE2A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE2B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE2C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE2D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE2E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE2F.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE30.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE31.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE32.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE33.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE34.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE35.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE36.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE37.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE38.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE39.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE3A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE3B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE3C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE3D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE3E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE3F.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE40.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE45.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE46.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE47.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE48.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE49.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE4A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE4B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE4C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE4D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE4E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE4F.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE80.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE81.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE82.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE83.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE84.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE85.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE86.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE87.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE88.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE89.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE8A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE8B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE8C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE8D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE8E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE8F.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE90.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE91.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE92.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE93.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE94.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE95.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE96.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE97.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE98.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE99.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE9A.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE9B.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE9C.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE9D.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE9E.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDE9F.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEA0.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEA1.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEA2.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEA3.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEA4.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEA5.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEA6.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEA7.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEA8.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEA9.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEAA.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEAB.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEAC.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEAD.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEAE.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEAF.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEB0.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEB1.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEB2.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEB3.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEB4.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEB5.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEB6.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEB7.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEB8.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEB9.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEBA.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEBB.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEBC.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEBD.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEBE.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEBF.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEC0.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEC1.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEC2.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEC3.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEC4.png" />
+    <Content Include="Resources\Images\Smiles\1X\D83DDEC5.png" />
+    <Content Include="Resources\Images\Smiles\2X\002320E3.png" />
+    <Content Include="Resources\Images\Smiles\2X\003020E3.png" />
+    <Content Include="Resources\Images\Smiles\2X\003120E3.png" />
+    <Content Include="Resources\Images\Smiles\2X\003220E3.png" />
+    <Content Include="Resources\Images\Smiles\2X\003320E3.png" />
+    <Content Include="Resources\Images\Smiles\2X\003420E3.png" />
+    <Content Include="Resources\Images\Smiles\2X\003520E3.png" />
+    <Content Include="Resources\Images\Smiles\2X\003620E3.png" />
+    <Content Include="Resources\Images\Smiles\2X\003720E3.png" />
+    <Content Include="Resources\Images\Smiles\2X\003820E3.png" />
+    <Content Include="Resources\Images\Smiles\2X\003920E3.png" />
+    <Content Include="Resources\Images\Smiles\2X\00A9.png" />
+    <Content Include="Resources\Images\Smiles\2X\00AE.png" />
+    <Content Include="Resources\Images\Smiles\2X\203C.png" />
+    <Content Include="Resources\Images\Smiles\2X\2049.png" />
+    <Content Include="Resources\Images\Smiles\2X\2122.png" />
+    <Content Include="Resources\Images\Smiles\2X\2139.png" />
+    <Content Include="Resources\Images\Smiles\2X\2194.png" />
+    <Content Include="Resources\Images\Smiles\2X\2195.png" />
+    <Content Include="Resources\Images\Smiles\2X\2196.png" />
+    <Content Include="Resources\Images\Smiles\2X\2197.png" />
+    <Content Include="Resources\Images\Smiles\2X\2198.png" />
+    <Content Include="Resources\Images\Smiles\2X\2199.png" />
+    <Content Include="Resources\Images\Smiles\2X\21A9.png" />
+    <Content Include="Resources\Images\Smiles\2X\21AA.png" />
+    <Content Include="Resources\Images\Smiles\2X\231A.png" />
+    <Content Include="Resources\Images\Smiles\2X\231B.png" />
+    <Content Include="Resources\Images\Smiles\2X\23E9.png" />
+    <Content Include="Resources\Images\Smiles\2X\23EA.png" />
+    <Content Include="Resources\Images\Smiles\2X\23EB.png" />
+    <Content Include="Resources\Images\Smiles\2X\23EC.png" />
+    <Content Include="Resources\Images\Smiles\2X\23F0.png" />
+    <Content Include="Resources\Images\Smiles\2X\23F3.png" />
+    <Content Include="Resources\Images\Smiles\2X\24C2.png" />
+    <Content Include="Resources\Images\Smiles\2X\25AA.png" />
+    <Content Include="Resources\Images\Smiles\2X\25AB.png" />
+    <Content Include="Resources\Images\Smiles\2X\25B6.png" />
+    <Content Include="Resources\Images\Smiles\2X\25C0.png" />
+    <Content Include="Resources\Images\Smiles\2X\25FB.png" />
+    <Content Include="Resources\Images\Smiles\2X\25FC.png" />
+    <Content Include="Resources\Images\Smiles\2X\25FD.png" />
+    <Content Include="Resources\Images\Smiles\2X\25FE.png" />
+    <Content Include="Resources\Images\Smiles\2X\2600.png" />
+    <Content Include="Resources\Images\Smiles\2X\2601.png" />
+    <Content Include="Resources\Images\Smiles\2X\260E.png" />
+    <Content Include="Resources\Images\Smiles\2X\2611.png" />
+    <Content Include="Resources\Images\Smiles\2X\2614.png" />
+    <Content Include="Resources\Images\Smiles\2X\2615.png" />
+    <Content Include="Resources\Images\Smiles\2X\261D.png" />
+    <Content Include="Resources\Images\Smiles\2X\263A.png" />
+    <Content Include="Resources\Images\Smiles\2X\2648.png" />
+    <Content Include="Resources\Images\Smiles\2X\2649.png" />
+    <Content Include="Resources\Images\Smiles\2X\264A.png" />
+    <Content Include="Resources\Images\Smiles\2X\264B.png" />
+    <Content Include="Resources\Images\Smiles\2X\264C.png" />
+    <Content Include="Resources\Images\Smiles\2X\264D.png" />
+    <Content Include="Resources\Images\Smiles\2X\264E.png" />
+    <Content Include="Resources\Images\Smiles\2X\264F.png" />
+    <Content Include="Resources\Images\Smiles\2X\2650.png" />
+    <Content Include="Resources\Images\Smiles\2X\2651.png" />
+    <Content Include="Resources\Images\Smiles\2X\2652.png" />
+    <Content Include="Resources\Images\Smiles\2X\2653.png" />
+    <Content Include="Resources\Images\Smiles\2X\2660.png" />
+    <Content Include="Resources\Images\Smiles\2X\2663.png" />
+    <Content Include="Resources\Images\Smiles\2X\2665.png" />
+    <Content Include="Resources\Images\Smiles\2X\2666.png" />
+    <Content Include="Resources\Images\Smiles\2X\2668.png" />
+    <Content Include="Resources\Images\Smiles\2X\267B.png" />
+    <Content Include="Resources\Images\Smiles\2X\267F.png" />
+    <Content Include="Resources\Images\Smiles\2X\2693.png" />
+    <Content Include="Resources\Images\Smiles\2X\26A0.png" />
+    <Content Include="Resources\Images\Smiles\2X\26A1.png" />
+    <Content Include="Resources\Images\Smiles\2X\26AA.png" />
+    <Content Include="Resources\Images\Smiles\2X\26AB.png" />
+    <Content Include="Resources\Images\Smiles\2X\26BD.png" />
+    <Content Include="Resources\Images\Smiles\2X\26BE.png" />
+    <Content Include="Resources\Images\Smiles\2X\26C4.png" />
+    <Content Include="Resources\Images\Smiles\2X\26C5.png" />
+    <Content Include="Resources\Images\Smiles\2X\26CE.png" />
+    <Content Include="Resources\Images\Smiles\2X\26D4.png" />
+    <Content Include="Resources\Images\Smiles\2X\26EA.png" />
+    <Content Include="Resources\Images\Smiles\2X\26F2.png" />
+    <Content Include="Resources\Images\Smiles\2X\26F3.png" />
+    <Content Include="Resources\Images\Smiles\2X\26F5.png" />
+    <Content Include="Resources\Images\Smiles\2X\26FA.png" />
+    <Content Include="Resources\Images\Smiles\2X\26FD.png" />
+    <Content Include="Resources\Images\Smiles\2X\2702.png" />
+    <Content Include="Resources\Images\Smiles\2X\2705.png" />
+    <Content Include="Resources\Images\Smiles\2X\2708.png" />
+    <Content Include="Resources\Images\Smiles\2X\2709.png" />
+    <Content Include="Resources\Images\Smiles\2X\270A.png" />
+    <Content Include="Resources\Images\Smiles\2X\270B.png" />
+    <Content Include="Resources\Images\Smiles\2X\270C.png" />
+    <Content Include="Resources\Images\Smiles\2X\270F.png" />
+    <Content Include="Resources\Images\Smiles\2X\2712.png" />
+    <Content Include="Resources\Images\Smiles\2X\2714.png" />
+    <Content Include="Resources\Images\Smiles\2X\2716.png" />
+    <Content Include="Resources\Images\Smiles\2X\2728.png" />
+    <Content Include="Resources\Images\Smiles\2X\2733.png" />
+    <Content Include="Resources\Images\Smiles\2X\2734.png" />
+    <Content Include="Resources\Images\Smiles\2X\2744.png" />
+    <Content Include="Resources\Images\Smiles\2X\2747.png" />
+    <Content Include="Resources\Images\Smiles\2X\274C.png" />
+    <Content Include="Resources\Images\Smiles\2X\274E.png" />
+    <Content Include="Resources\Images\Smiles\2X\2753.png" />
+    <Content Include="Resources\Images\Smiles\2X\2754.png" />
+    <Content Include="Resources\Images\Smiles\2X\2755.png" />
+    <Content Include="Resources\Images\Smiles\2X\2757.png" />
+    <Content Include="Resources\Images\Smiles\2X\2764.png" />
+    <Content Include="Resources\Images\Smiles\2X\2795.png" />
+    <Content Include="Resources\Images\Smiles\2X\2796.png" />
+    <Content Include="Resources\Images\Smiles\2X\2797.png" />
+    <Content Include="Resources\Images\Smiles\2X\27A1.png" />
+    <Content Include="Resources\Images\Smiles\2X\27B0.png" />
+    <Content Include="Resources\Images\Smiles\2X\27BF.png" />
+    <Content Include="Resources\Images\Smiles\2X\2934.png" />
+    <Content Include="Resources\Images\Smiles\2X\2935.png" />
+    <Content Include="Resources\Images\Smiles\2X\2B05.png" />
+    <Content Include="Resources\Images\Smiles\2X\2B06.png" />
+    <Content Include="Resources\Images\Smiles\2X\2B07.png" />
+    <Content Include="Resources\Images\Smiles\2X\2B1B.png" />
+    <Content Include="Resources\Images\Smiles\2X\2B1C.png" />
+    <Content Include="Resources\Images\Smiles\2X\2B50.png" />
+    <Content Include="Resources\Images\Smiles\2X\2B55.png" />
+    <Content Include="Resources\Images\Smiles\2X\3030.png" />
+    <Content Include="Resources\Images\Smiles\2X\303D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDC04.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDCCF.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDD70.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDD71.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDD7E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDD7F.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDD8E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDD91.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDD92.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDD93.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDD94.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDD95.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDD96.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDD97.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDD98.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDD99.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDD9A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDDE8D83CDDF3.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDDE9D83CDDEA.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDDEAD83CDDF8.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDDEBD83CDDF7.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDDECD83CDDE7.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDDEED83CDDF9.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDDEFD83CDDF5.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDDF0D83CDDF7.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDDF7D83CDDFA.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDDFAD83CDDF8.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDE01.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF00.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF01.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF02.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF03.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF04.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF05.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF06.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF07.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF08.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF09.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF0A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF0B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF0C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF0D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF0E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF0F.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF10.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF11.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF12.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF13.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF14.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF15.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF16.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF17.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF18.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF19.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF1A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF1B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF1C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF1D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF1E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF1F.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF20.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF30.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF31.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF32.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF33.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF34.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF35.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF37.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF38.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF39.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF3A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF3B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF3C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF3D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF3E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF3F.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF40.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF41.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF42.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF43.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF44.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF45.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF46.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF47.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF48.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF49.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF4A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF4B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF4C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF4D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF4E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF4F.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF50.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF51.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF52.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF53.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF54.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF55.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF56.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF57.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF58.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF59.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF5A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF5B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF5C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF5D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF5E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF5F.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF60.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF61.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF62.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF63.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF64.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF65.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF66.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF67.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF68.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF69.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF6A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF6B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF6C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF6D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF6E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF6F.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF70.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF71.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF72.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF73.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF74.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF75.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF76.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF77.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF78.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF79.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF7A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF7B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF7C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF80.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF81.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF82.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF83.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF84.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF85.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF86.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF87.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF88.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF89.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF8A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF8B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF8C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF8D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF8E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF8F.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF90.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF91.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF92.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDF93.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFA0.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFA1.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFA2.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFA3.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFA4.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFA5.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFA6.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFA7.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFA8.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFA9.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFAA.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFAB.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFAC.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFAD.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFAE.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFAF.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFB0.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFB1.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFB2.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFB3.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFB4.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFB5.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFB6.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFB7.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFB8.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFB9.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFBA.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFBB.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFBC.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFBD.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFBE.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFBF.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFC0.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFC1.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFC2.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFC3.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFC4.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFC6.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFC7.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFC8.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFC9.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFCA.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFE0.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFE1.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFE2.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFE3.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFE4.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFE5.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFE6.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFE7.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFE8.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFE9.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFEA.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFEB.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFEC.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFED.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFEE.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFEF.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83CDFF0.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC00.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC01.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC02.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC03.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC04.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC05.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC06.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC07.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC08.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC09.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC0A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC0B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC0C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC0D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC0E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC0F.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC10.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC11.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC12.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC13.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC14.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC15.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC16.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC17.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC18.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC19.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC1A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC1B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC1C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC1D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC1E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC1F.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC20.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC21.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC22.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC23.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC24.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC25.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC26.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC27.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC28.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC29.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC2A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC2B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC2C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC2D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC2E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC2F.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC30.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC31.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC32.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC33.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC34.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC35.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC36.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC37.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC38.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC39.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC3A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC3B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC3C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC3D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC3E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC40.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC42.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC43.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC44.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC45.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC46.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC47.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC48.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC49.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC4A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC4B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC4C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC4D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC4E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC4F.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC50.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC51.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC52.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC53.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC54.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC55.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC56.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC57.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC58.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC59.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC5A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC5B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC5C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC5D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC5E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC5F.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC60.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC61.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC62.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC63.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC64.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC65.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC66.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC67.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC68.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC69.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC6A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC6B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC6C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC6D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC6E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC6F.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC70.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC71.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC72.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC73.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC74.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC75.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC76.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC77.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC78.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC79.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC7A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC7B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC7C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC7D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC7E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC7F.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC80.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC81.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC82.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC83.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC84.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC85.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC86.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC87.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC88.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC89.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC8A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC8B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC8C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC8D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC8E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC8F.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC90.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC91.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC92.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC93.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC94.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC95.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC96.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC97.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC98.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC99.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC9A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC9B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC9C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC9D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC9E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDC9F.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCA0.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCA1.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCA2.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCA3.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCA4.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCA5.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCA6.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCA7.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCA8.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCA9.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCAA.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCAB.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCAC.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCAD.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCAE.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCAF.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCB0.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCB1.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCB2.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCB3.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCB4.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCB5.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCB6.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCB7.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCB8.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCB9.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCBA.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCBB.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCBC.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCBD.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCBE.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCBF.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCC0.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCC1.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCC2.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCC3.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCC4.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCC5.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCC6.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCC7.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCC8.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCC9.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCCA.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCCB.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCCC.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCCD.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCCE.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCCF.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCD0.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCD1.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCD2.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCD3.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCD4.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCD5.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCD6.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCD7.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCD8.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCD9.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCDA.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCDB.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCDC.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCDD.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCDE.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCDF.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCE0.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCE1.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCE2.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCE3.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCE4.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCE5.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCE6.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCE7.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCE8.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCE9.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCEA.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCEB.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCEC.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCED.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCEE.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCEF.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCF0.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCF1.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCF2.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCF3.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCF4.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCF5.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCF6.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCF7.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCF9.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCFA.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCFB.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDCFC.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD00.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD01.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD02.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD03.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD04.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD05.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD06.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD07.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD08.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD09.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD0A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD0B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD0C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD0D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD0E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD0F.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD10.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD11.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD12.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD13.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD14.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD15.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD16.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD17.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD18.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD19.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD1A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD1B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD1C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD1D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD1E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD1F.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD20.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD21.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD22.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD23.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD24.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD25.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD26.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD27.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD28.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD29.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD2A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD2B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD2C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD2D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD2E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD2F.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD30.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD31.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD32.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD33.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD34.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD35.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD36.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD37.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD38.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD39.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD3A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD3B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD3C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDD3D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDDFB.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDDFC.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDDFD.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDDFE.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDDFF.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE00.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE01.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE02.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE03.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE04.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE05.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE06.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE07.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE08.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE09.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE0A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE0B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE0C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE0D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE0E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE0F.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE10.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE11.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE12.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE13.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE14.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE15.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE16.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE17.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE18.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE19.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE1A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE1B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE1C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE1D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE1E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE1F.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE20.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE21.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE22.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE23.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE24.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE25.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE26.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE27.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE28.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE29.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE2A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE2B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE2C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE2D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE2E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE2F.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE30.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE31.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE32.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE33.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE34.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE35.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE36.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE37.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE38.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE39.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE3A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE3B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE3C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE3D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE3E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE3F.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE40.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE45.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE46.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE47.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE48.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE49.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE4A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE4B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE4C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE4D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE4E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE4F.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE80.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE81.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE82.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE83.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE84.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE85.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE86.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE87.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE88.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE89.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE8A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE8B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE8C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE8D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE8E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE8F.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE90.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE91.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE92.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE93.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE94.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE95.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE96.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE97.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE98.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE99.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE9A.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE9B.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE9C.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE9D.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE9E.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDE9F.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEA0.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEA1.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEA2.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEA3.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEA4.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEA5.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEA6.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEA7.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEA8.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEA9.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEAA.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEAB.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEAC.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEAD.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEAE.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEAF.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEB0.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEB1.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEB2.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEB3.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEB4.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEB5.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEB6.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEB7.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEB8.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEB9.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEBA.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEBB.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEBC.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEBD.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEBE.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEBF.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEC0.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEC1.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEC2.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEC3.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEC4.png" />
+    <Content Include="Resources\Images\Smiles\2X\D83DDEC5.png" />
+    <Content Include="Resources\Images\Smiles\sprite.png" />
+    <Content Include="Resources\Images\Smiles\sprite140.png" />
+    <Content Include="Resources\Images\Smiles\sprite180.png" />
+    <PRIResource Include="Resources\Localization\ru\Errors.resw" />
+    <PRIResource Include="Resources\Localization\en-US\Errors.resw" />
+    <PRIResource Include="Resources\Localization\ru\Resources.resw" />
+    <PRIResource Include="Resources\Localization\en-US\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Behaviors\ContextMenuBehavior.cs" />
+    <Compile Include="Controls\AttachmentUploadDocumentControl.xaml.cs">
+      <DependentUpon>AttachmentUploadDocumentControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AttachmentUploadForwardMessagesControl.xaml.cs">
+      <DependentUpon>AttachmentUploadForwardMessagesControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AttachmentUploadPhotoControl.xaml.cs">
+      <DependentUpon>AttachmentUploadPhotoControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AttachmentUploadVideoControl.xaml.cs">
+      <DependentUpon>AttachmentUploadVideoControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AvatarControl.xaml.cs">
+      <DependentUpon>AvatarControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BackDrop.cs" />
+    <Compile Include="Controls\ChatListView.cs" />
+    <Compile Include="Controls\ChatSmilesControl.xaml.cs">
+      <DependentUpon>ChatSmilesControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MessageForwardedMessageControl.xaml.cs">
+      <DependentUpon>MessageForwardedMessageControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MessageServiceControl.xaml.cs">
+      <DependentUpon>MessageServiceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PopupControl.xaml.cs">
+      <DependentUpon>PopupControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MessageAudioControl.xaml.cs">
+      <DependentUpon>MessageAudioControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MessageControl.xaml.cs">
+      <DependentUpon>MessageControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MessageDocumentControl.xaml.cs">
+      <DependentUpon>MessageDocumentControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MessageLinkControl.xaml.cs">
+      <DependentUpon>MessageLinkControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MessageVideoControl.xaml.cs">
+      <DependentUpon>MessageVideoControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MessageWallPostControl.xaml.cs">
+      <DependentUpon>MessageWallPostControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SettingsFlyoutControl.xaml.cs">
+      <DependentUpon>SettingsFlyoutControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\AudioTimeSpanConverter.cs" />
+    <Compile Include="Converters\ChatAttachmentUploadTemplateSelector.cs" />
+    <Compile Include="Converters\CompactDialogTemplateSelector.cs" />
+    <Compile Include="Converters\DialogBodyContentTemplateSelector.cs" />
+    <Compile Include="Converters\DialogTemplateSelector.cs" />
+    <Compile Include="Converters\ListItemClickArgsConverter.cs" />
+    <Compile Include="Converters\MessageDocumentSizeToStringConverter.cs" />
+    <Compile Include="Converters\MessageItemStyleSelector.cs" />
+    <Compile Include="Converters\MessageItemTemplateSelector.cs" />
+    <Compile Include="Converters\MessageTimeConverter.cs" />
+    <Compile Include="AppSettings.cs" />
+    <Compile Include="DebugData\DebugConversationViewModel.cs" />
+    <Compile Include="DebugData\DebugDialogsViewModel.cs" />
+    <Compile Include="Helpers\AppHelper.cs" />
+    <Compile Include="Helpers\DateFormatHelper.cs" />
+    <Compile Include="Helpers\ForwardMessagesHelper.cs" />
+    <Compile Include="Helpers\LicenseHelper.cs" />
+    <Compile Include="Helpers\Localizator.cs" />
+    <Compile Include="Helpers\MapHelper.cs" />
+    <Compile Include="Helpers\Navigator.cs" />
+    <Compile Include="Helpers\PhotoSpacier.cs" />
+    <Compile Include="Helpers\Smiles.cs" />
+    <Compile Include="Helpers\StringFormatter.cs" />
+    <Compile Include="Helpers\TextBlockExtensions.cs" />
+    <Compile Include="Helpers\ThemeHelper.cs" />
+    <Compile Include="Helpers\TileHelper.cs" />
+    <Compile Include="Model\AttachmentUpload.cs" />
+    <Compile Include="Model\SettingsAppLanguage.cs" />
+    <Compile Include="Model\SettingsAppTheme.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Resources\DataTemplates\ConversationDataTemplates.cs" />
+    <Compile Include="Resources\DataTemplates\DialogsDataTemplates.cs" />
+    <Compile Include="Helpers\IncrementalTopLoadingCollection.cs" />
+    <Compile Include="Helpers\ISupportTopIncrementalLoading.cs" />
+    <Compile Include="Helpers\PushHelper.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Dialog.cs" />
+    <Compile Include="Model\Message.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AudioService.cs" />
+    <Compile Include="Services\ExceptionHandler.cs" />
+    <Compile Include="Services\Logger.cs" />
+    <Compile Include="Services\LongPollHandler.cs" />
+    <Compile Include="Services\ServiceLocator.cs" />
+    <Compile Include="Services\UserPresenceService.cs" />
+    <Compile Include="Services\UserService.cs" />
+    <Compile Include="ViewModel\ConversationViewModel.cs" />
+    <Compile Include="ViewModel\DialogsViewModel.cs" />
+    <Compile Include="ViewModel\LoginViewModel.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\Messaging\GoToDialogMessage.cs" />
+    <Compile Include="ViewModel\Messaging\LoginStateChangedMessage.cs" />
+    <Compile Include="ViewModel\Messaging\LongPollChatMessage.cs" />
+    <Compile Include="ViewModel\Messaging\LongPollFriendOnlineStatusChangedMessage.cs" />
+    <Compile Include="ViewModel\Messaging\LongPollMessageDeleted.cs" />
+    <Compile Include="ViewModel\Messaging\LongPollMessageFlagsRemoved.cs" />
+    <Compile Include="ViewModel\Messaging\LongPollMessageFlagsAdded.cs" />
+    <Compile Include="ViewModel\Messaging\LongPollUserStartedTypingMessage.cs" />
+    <Compile Include="ViewModel\Messaging\NewDialogStartedMessage.cs" />
+    <Compile Include="ViewModel\Messaging\PushNotificationReceivedMessage.cs" />
+    <Compile Include="ViewModel\NewDialogViewModel.cs" />
+    <Compile Include="ViewModel\SettingsViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="View\ChatView.xaml.cs">
+      <DependentUpon>ChatView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginView.xaml.cs">
+      <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NewDialogView.xaml.cs">
+      <DependentUpon>NewDialogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PhotosPreviewView.xaml.cs">
+      <DependentUpon>PhotosPreviewView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingsView.xaml.cs">
+      <DependentUpon>SettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\VideoPreviewView.xaml.cs">
+      <DependentUpon>VideoPreviewView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="Colibri_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Package.StoreAssociation.xml" />
+    <Content Include="Assets\Square44x44Logo.targetsize-48_altform-unplated.png" />
+    <Content Include="Assets\Square71x71Logo.scale-200.png" />
+    <Content Include="Assets\StoreLogo.scale-200.png" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Controls\AttachmentUploadDocumentControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\AttachmentUploadForwardMessagesControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\AttachmentUploadPhotoControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\AttachmentUploadVideoControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\AvatarControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ChatSmilesControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\MessageForwardedMessageControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\MessageServiceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PopupControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\MessageAudioControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\MessageControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\MessageDocumentControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\MessageLinkControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\MessageVideoControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\MessageWallPostControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SettingsFlyoutControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.DeviceFamily-Mobile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\DataTemplates\ConversationDataTemplates.DeviceFamily-Mobile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Resources\DataTemplates\ConversationDataTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Resources\DataTemplates\DialogsDataTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Resources\Styles\Brushes.DeviceFamily-Mobile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Styles\Brushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Styles\ButtonStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Resources\Styles\ComboBoxStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Resources\Styles\CommonStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Resources\Styles\Icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Styles\ListViewStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Styles\SemanticZoomStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Resources\Styles\SliderStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Resources\Styles\TextBoxStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Resources\Themes\System.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Resources\Themes\Vk.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="View\ChatView.DeviceFamily-Mobile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ChatView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\LoginView.DeviceFamily-Mobile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\LoginView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\NewDialogView.DeviceFamily-Mobile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\NewDialogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PhotosPreviewView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SettingsView.DeviceFamily-Mobile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\VideoPreviewView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Jupiter\Jupiter.UWP\Jupiter.UWP.csproj">
+      <Project>{51f9f331-1237-4d09-b8b7-eb00be730c19}</Project>
+      <Name>Jupiter.UWP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tasks\BackgroundTasks\BackgroundTasks.csproj">
+      <Project>{ae494ead-bb67-4809-90bd-ce1a241b2192}</Project>
+      <Name>BackgroundTasks</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VkLib\VkLib.csproj">
+      <Project>{53a806d8-1a75-41e3-b672-c75639e4c7a3}</Project>
+      <Name>VkLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="WindowsDesktop, Version=10.0.17134.0">
+      <Name>Windows Desktop Extensions for the UWP</Name>
+    </SDKReference>
+    <SDKReference Include="WindowsMobile, Version=10.0.17134.0">
+      <Name>Windows Mobile Extensions for the UWP</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MetroLog">
+      <Version>1.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ApplicationInsights.WindowsApps">
+      <Version>1.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.1.7</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Uwp.Managed">
+      <Version>2.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmLightLibs">
+      <Version>5.4.1</Version>
+    </PackageReference>
+    <PackageReference Include="NotificationsExtensions.Win10">
+      <Version>14332.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Win2D.uwp">
+      <Version>1.23.0</Version>
+    </PackageReference>
+    <PackageReference Include="Yandex.Metrica">
+      <Version>3.5.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

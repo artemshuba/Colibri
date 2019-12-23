@@ -1,0 +1,45 @@
+﻿<app:JupiterApp
+    x:Class="Colibri.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:app="using:Jupiter.Application"
+    xmlns:viewModel="using:Colibri.ViewModel"
+    xmlns:commonConverters="using:Jupiter.Converters"
+    xmlns:converters="using:Colibri.Converters"
+    xmlns:dataTemplates="using:Colibri.Resources.DataTemplates">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Themes/System.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Brushes.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Icons.xaml" />
+                <ResourceDictionary Source="Resources/Styles/ListViewStyles.xaml" />
+                <ResourceDictionary Source="Resources/Styles/TextBoxStyles.xaml" />
+                <ResourceDictionary Source="Resources/Styles/ButtonStyles.xaml" />
+                <ResourceDictionary Source="Resources/Styles/CommonStyles.xaml" />
+                <ResourceDictionary Source="Resources/Styles/SemanticZoomStyles.xaml" />
+                <ResourceDictionary Source="Resources/Styles/SliderStyles.xaml" />
+                <ResourceDictionary Source="Resources/Styles/ComboBoxStyles.xaml" />
+
+                <dataTemplates:DialogsDataTemplates />
+                <dataTemplates:ConversationDataTemplates />
+                <ResourceDictionary Source="Resources/DataTemplates/ConversationDataTemplates.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <viewModel:ViewModelLocator x:Key="Locator"/>
+
+            <commonConverters:StringToUpperConverter x:Key="StringToUpperConverter"/>
+            <commonConverters:BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+            <commonConverters:IsEmptyToVisibilityConverter x:Key="IsEmptyToVisibilityConverter"/>
+
+            <commonConverters:BooleanToObjectConverter x:Key="IsReadFontConverter" FalseObject="Bold" TrueObject="Normal" />
+
+            <converters:MessageTimeConverter x:Key="MessageTimeConverter"/>
+            <converters:AudioTimeSpanConverter x:Key="AudioTimeConverter"/>
+            <converters:MessageDocumentSizeToStringConverter x:Key="MessageDocumentSizeToStringConverter"/>
+        </ResourceDictionary>
+    </Application.Resources>
+
+</app:JupiterApp>
+

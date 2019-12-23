@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AttachmentsDual" xml:space="preserve">
+    <value>вложения</value>
+  </data>
+  <data name="AttachmentsPlural" xml:space="preserve">
+    <value>вложений</value>
+  </data>
+  <data name="AttachmentsSingular" xml:space="preserve">
+    <value>вложение</value>
+  </data>
+  <data name="AudiosDual" xml:space="preserve">
+    <value>аудиозаписи</value>
+  </data>
+  <data name="AudiosPlural" xml:space="preserve">
+    <value>аудиозаписей</value>
+  </data>
+  <data name="AudiosSingular" xml:space="preserve">
+    <value>аудиозапись</value>
+  </data>
+  <data name="ChatAttachButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Прикрепить</value>
+  </data>
+  <data name="ChatAttachMenuItemLocation.Text" xml:space="preserve">
+    <value>Местоположение</value>
+  </data>
+  <data name="ChatAttachMenuItemPhoto.Text" xml:space="preserve">
+    <value>Фото</value>
+  </data>
+  <data name="ChatSendButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Отправить</value>
+  </data>
+  <data name="ChatTextBox.PlaceholderText" xml:space="preserve">
+    <value>Введите текст сообщения</value>
+  </data>
+  <data name="DialogGift" xml:space="preserve">
+    <value>Подарок</value>
+  </data>
+  <data name="DialogLink" xml:space="preserve">
+    <value>Ссылка</value>
+  </data>
+  <data name="DialogSticker" xml:space="preserve">
+    <value>Стикер</value>
+  </data>
+  <data name="DialogsTitle.Text" xml:space="preserve">
+    <value>БЕСЕДЫ</value>
+  </data>
+  <data name="DialogWallPost" xml:space="preserve">
+    <value>Запись на стене</value>
+  </data>
+  <data name="DocumentsDual" xml:space="preserve">
+    <value>документа</value>
+  </data>
+  <data name="DocumentsPlural" xml:space="preserve">
+    <value>документов</value>
+  </data>
+  <data name="DocumentsSingular" xml:space="preserve">
+    <value>документ</value>
+  </data>
+  <data name="AppbarButtonNewDialog.Label" xml:space="preserve">
+    <value>Новая беседа</value>
+  </data>
+  <data name="PhotosDual" xml:space="preserve">
+    <value>фотографии</value>
+  </data>
+  <data name="PhotosPlural" xml:space="preserve">
+    <value>фотографий</value>
+  </data>
+  <data name="PhotosSingular" xml:space="preserve">
+    <value>фотография</value>
+  </data>
+  <data name="AppbarButtonSearch.Label" xml:space="preserve">
+    <value>Поиск</value>
+  </data>
+  <data name="AppbarButtonSettings.Label" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="VideosDual" xml:space="preserve">
+    <value>видеозаписи</value>
+  </data>
+  <data name="VideosPlural" xml:space="preserve">
+    <value>видеозаписей</value>
+  </data>
+  <data name="VideosSingular" xml:space="preserve">
+    <value>видеозапись</value>
+  </data>
+  <data name="MessageTimeFormat" xml:space="preserve">
+    <value>dd.MM</value>
+  </data>
+  <data name="UserStatusLastSeenFemale" xml:space="preserve">
+    <value>Была в сети</value>
+  </data>
+  <data name="UserStatusLastSeenMale" xml:space="preserve">
+    <value>Был в сети</value>
+  </data>
+  <data name="UserStatusLastSeenToday" xml:space="preserve">
+    <value>сегодня в</value>
+  </data>
+  <data name="UserStatusLastSeenYesterday" xml:space="preserve">
+    <value>вчера в</value>
+  </data>
+  <data name="UserStatusOnline" xml:space="preserve">
+    <value>Онлайн</value>
+  </data>
+  <data name="Yesterday" xml:space="preserve">
+    <value>Вчера</value>
+  </data>
+  <data name="AppbarButtonSignOut.Label" xml:space="preserve">
+    <value>Выйти из аккаунта</value>
+  </data>
+  <data name="LoginLoginTextBox.PlaceholderText" xml:space="preserve">
+    <value>Логин, телефон или e-mail</value>
+  </data>
+  <data name="LoginPasswordBox.PlaceholderText" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="LoginCaptchaBox.PlaceholderText" xml:space="preserve">
+    <value>Символы с картинки</value>
+  </data>
+  <data name="LoginLoginButton.Content" xml:space="preserve">
+    <value>Войти</value>
+  </data>
+  <data name="NewDialogSearchBox.PlaceholderText" xml:space="preserve">
+    <value>Поиск</value>
+  </data>
+  <data name="ChatMessageDocument.Text" xml:space="preserve">
+    <value>Документ</value>
+  </data>
+  <data name="ChatMessageWallPostTitle" xml:space="preserve">
+    <value>Запись на стене</value>
+  </data>
+  <data name="MessageWallPostTimeFormat" xml:space="preserve">
+    <value>d MMMM, yyyy</value>
+  </data>
+  <data name="LoginRestorePasswordButton.Content" xml:space="preserve">
+    <value>Восстановить пароль</value>
+  </data>
+  <data name="LoginSignUpButton.Content" xml:space="preserve">
+    <value>Зарегистрироваться ВКонтакте</value>
+  </data>
+  <data name="SettingsAppThemeComboBox.Header" xml:space="preserve">
+    <value>Тема</value>
+  </data>
+  <data name="SettingsTitle.Text" xml:space="preserve">
+    <value>НАСТРОЙКИ</value>
+  </data>
+  <data name="AppbarButtonRefresh.Label" xml:space="preserve">
+    <value>Обновить</value>
+  </data>
+  <data name="UserStatusTyping" xml:space="preserve">
+    <value>Набирает сообщение...</value>
+  </data>
+  <data name="MessageStatusUnread" xml:space="preserve">
+    <value>Не прочитано</value>
+  </data>
+  <data name="MessageStatusFailed" xml:space="preserve">
+    <value>Не удалось отправить</value>
+  </data>
+  <data name="MessageStatusSending" xml:space="preserve">
+    <value>Отправка...</value>
+  </data>
+  <data name="DialogLocation" xml:space="preserve">
+    <value>Местоположение</value>
+  </data>
+  <data name="DialogForwardedMessagesDual" xml:space="preserve">
+    <value>пересланных сообщения</value>
+  </data>
+  <data name="DialogForwardedMessagesPlural" xml:space="preserve">
+    <value>пересланных сообщений</value>
+  </data>
+  <data name="DialogForwardedMessagesSingular" xml:space="preserve">
+    <value>пересланное сообщение</value>
+  </data>
+  <data name="ForwardedMessagesTitle.Text" xml:space="preserve">
+    <value>Пересланные сообщения</value>
+  </data>
+  <data name="ConversationPersonDual" xml:space="preserve">
+    <value>участника</value>
+  </data>
+  <data name="ConversationPersonPlural" xml:space="preserve">
+    <value>участника</value>
+  </data>
+  <data name="ConversationPersonSingular" xml:space="preserve">
+    <value>участник</value>
+  </data>
+  <data name="ChatServiceMessageChatCreated" xml:space="preserve">
+    <value>{0} создал беседу "{1}"</value>
+  </data>
+  <data name="ContextMenuRemove.Text" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="SettingsAppThemeDark" xml:space="preserve">
+    <value>Темная</value>
+  </data>
+  <data name="SettingsAppThemeDefault" xml:space="preserve">
+    <value>По умолчанию</value>
+  </data>
+  <data name="SettingsAppThemeLight" xml:space="preserve">
+    <value>Светлая</value>
+  </data>
+  <data name="SettingsAboutTitle.Text" xml:space="preserve">
+    <value>О ПРИЛОЖЕНИИ</value>
+  </data>
+  <data name="SettingsVersionTitle.Text" xml:space="preserve">
+    <value>Версия</value>
+  </data>
+  <data name="SettingsAppLanguageComboBox.Header" xml:space="preserve">
+    <value>Язык</value>
+  </data>
+  <data name="SettingsRestartDialogContent" xml:space="preserve">
+    <value>Чтобы принять изменения, необходимо закрыть и снова запустить приложение. Хотите закрыть приложение?</value>
+  </data>
+  <data name="SettingsRestartDialogHeader" xml:space="preserve">
+    <value>Перезапустите приложение</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="SettingsNotificationsSwitch.Header" xml:space="preserve">
+    <value>Уведомления о новых сообщениях</value>
+  </data>
+  <data name="NewDialogSortByFirstName.Content" xml:space="preserve">
+    <value>Имени</value>
+  </data>
+  <data name="NewDialogSortByHints.Content" xml:space="preserve">
+    <value>Рейтингу</value>
+  </data>
+  <data name="NewDialogSortByLastName.Content" xml:space="preserve">
+    <value>Фамилии</value>
+  </data>
+  <data name="NewDialogSortComboBox.Header" xml:space="preserve">
+    <value>Сортировать по:</value>
+  </data>
+  <data name="DialogSelectHint.Text" xml:space="preserve">
+    <value>Выберите беседу из списка или создайте новую</value>
+  </data>
+  <data name="ChatServiceMessagePhotoRemoved" xml:space="preserve">
+    <value>{0} удалил фотографию беседы</value>
+  </data>
+  <data name="ChatServiceMessagePhotoUpdated" xml:space="preserve">
+    <value>{0} обновил фотографию беседы</value>
+  </data>
+  <data name="ChatAttachMenuItemDocument.Text" xml:space="preserve">
+    <value>Документ</value>
+  </data>
+  <data name="DragDropAttachFile" xml:space="preserve">
+    <value>Прикрепить файл</value>
+  </data>
+  <data name="DragDropAttachFiles" xml:space="preserve">
+    <value>Прикрепить файлы</value>
+  </data>
+  <data name="DragDropAttachImage" xml:space="preserve">
+    <value>Прикрепить изображение</value>
+  </data>
+  <data name="DragDropAttachImages" xml:space="preserve">
+    <value>Прикрепить изображения</value>
+  </data>
+  <data name="ChatAttachMenuItemVideo.Text" xml:space="preserve">
+    <value>Видео</value>
+  </data>
+  <data name="ContextMenuForward.Text" xml:space="preserve">
+    <value>Переслать</value>
+  </data>
+  <data name="MessagesDual" xml:space="preserve">
+    <value>Сообщения</value>
+  </data>
+  <data name="MessagesPlural" xml:space="preserve">
+    <value>Сообщений</value>
+  </data>
+  <data name="MessagesSingular" xml:space="preserve">
+    <value>Сообщение</value>
+  </data>
+  <data name="ChatServiceMessageKickUser" xml:space="preserve">
+    <value>{0} покинул беседу</value>
+  </data>
+  <data name="ContextMenuDelete.Text" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="SettingsInvisbileModeTitle.Text" xml:space="preserve">
+    <value>РЕЖИМ НЕВИДИМОСТИ</value>
+  </data>
+  <data name="SettingsHideOnlineSwitch.Header" xml:space="preserve">
+    <value>Скрывать онлайн статус</value>
+  </data>
+  <data name="SettingsMarkAsReadSwitch.Header" xml:space="preserve">
+    <value>Не помечать сообщения как прочитанные</value>
+  </data>
+  <data name="SettingsBuyNowButton.Content" xml:space="preserve">
+    <value>Приобрести сейчас</value>
+  </data>
+  <data name="SettingsInvisibleModeHint.Text" xml:space="preserve">
+    <value>Для получения доступа к этим настройкам необходимо приобрести доступ к режиму Невидимости</value>
+  </data>
+  <data name="ContextMenuMarkAsRead.Text" xml:space="preserve">
+    <value>Отметить как прочитанное</value>
+  </data>
+  <data name="PushReplyPlaceholder" xml:space="preserve">
+    <value>Введите сообщение</value>
+  </data>
+  <data name="ExtendedNotificationsPrivacy.Text" xml:space="preserve">
+    <value>Эта опция включает интерактивные уведомления и новое отображение плитки приложения в меню Пуск.</value>
+  </data>
+  <data name="ExtendedNotificationsPrivacyFlyoutContent.Text" xml:space="preserve">
+    <value>Включив эту опцию вы сможете отвечать на входящие сообщения прямо из всплывающего уведомления. Для реализации этой возможности уведомления будут обрабатываться на нашем облачном сервере. Мы не храним ваши уведомления и не предоставляем доступ к ним третьим лицам.</value>
+  </data>
+  <data name="ExtendedNotificationsPrivacyFlyoutTitle.Text" xml:space="preserve">
+    <value>РАСШИРЕННЫЕ УВЕДОМЛЕНИЯ</value>
+  </data>
+  <data name="ExtendedNotificationsPrivacyReadMore.Text" xml:space="preserve">
+    <value>Подробнее</value>
+  </data>
+  <data name="SettingsExtendedNotificationsSwitch.Header" xml:space="preserve">
+    <value>Расширенные уведомления</value>
+  </data>
+  <data name="SettingsNotificationsTitle.Text" xml:space="preserve">
+    <value>УВЕДОМЛЕНИЯ</value>
+  </data>
+  <data name="AppbarButtonSave.Label" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="ExtendedNotificationsDisableWarning.Text" xml:space="preserve">
+    <value>Временно отключены по техническим причинам. Вы продолжите получать обычные уведомления. Как только проблемы разрешаться, расширенные уведомления снова будут доступны.</value>
+  </data>
+  <data name="SettingsHideOnlineSwitchWarning.Text" xml:space="preserve">
+    <value>Эта возможность больше недоступна из-за изменений на стороне ВКонтакте.</value>
+  </data>
+</root>

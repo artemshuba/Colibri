@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="Colibri.View.PhotosPreviewView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton x:Name="SaveButton" x:Uid="AppbarButtonSave" Icon="Save" Label="~Save" Click="SaveButton_OnClick"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <FlipView x:Name="FlipView" Background="{x:Null}" Loaded="FlipView_OnLoaded">
+        <FlipView.ItemTemplate>
+            <DataTemplate>
+                <Border Background="Transparent" Tapped="UIElement_OnTapped">
+                    <Image Source="{Binding}" Stretch="Uniform"/>
+                </Border>
+            </DataTemplate>
+        </FlipView.ItemTemplate>
+    </FlipView>
+</Page>

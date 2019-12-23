@@ -1,0 +1,75 @@
+﻿<Page
+    x:Class="Colibri.View.SettingsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModel="using:Colibri.ViewModel"
+    mc:Ignorable="d"
+    x:Name="rootElement">
+
+    <Page.DataContext>
+        <viewModel:SettingsViewModel />
+    </Page.DataContext>
+
+    <Grid x:Name="LayoutRoot" Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Uid="SettingsTitle" Text="~SETTINGS" Margin="10,10,0,0" FontWeight="Bold" FontSize="14" Typography.Capitals="SmallCaps" VerticalAlignment="Center"/>
+
+        <ScrollViewer Grid.Row="1" VerticalScrollMode="Auto" VerticalScrollBarVisibility="Auto">
+            <StackPanel Margin="10,20,10,0">
+                <ComboBox x:Uid="SettingsAppThemeComboBox" Margin="0,0,0,0" HorizontalAlignment="Stretch" Header="~Theme" ItemsSource="{Binding AppThemes}"
+                          DisplayMemberPath="Title"
+                          SelectedItem="{Binding SelectedAppTheme, Mode=TwoWay}" Background="Transparent" BorderThickness="1"/>
+
+                <ComboBox x:Uid="SettingsAppLanguageComboBox" Margin="0,20,0,0" HorizontalAlignment="Stretch" Header="~Language" Background="Transparent" BorderThickness="1"
+                          ItemsSource="{Binding AppLanguages}"
+                          DisplayMemberPath="Name"
+                          SelectedItem="{Binding SelectedAppLanguage, Mode=TwoWay}"/>
+
+                <ToggleSwitch x:Uid="SettingsNotificationsSwitch" Header="~Notifications" Margin="0,20,0,0" IsOn="{Binding EnableNotifications, Mode=TwoWay}"/>
+
+                <ToggleSwitch x:Uid="SettingsExtendedNotificationsSwitch" Header="~Extended notifications" Margin="0,20,0,0" IsOn="{Binding EnableExtendedNotifications, Mode=TwoWay}"/>
+
+                <TextBlock x:Name="ExtendedNotificationsPrivacyTextBlock" TextWrapping="Wrap" FontSize="12" Opacity="0.6">
+                    <FlyoutBase.AttachedFlyout>
+                            <Flyout>
+                                <StackPanel Width="280">
+                                   <TextBlock x:Uid="ExtendedNotificationsPrivacyFlyoutTitle"  FontSize="14" FontWeight="SemiBold" Margin="0,0,0,10" Typography.Capitals="SmallCaps">~EXTENDED NOTIFICATIONS</TextBlock>
+                                   <TextBlock x:Uid="ExtendedNotificationsPrivacyFlyoutContent"  FontSize="14" TextWrapping="WrapWholeWords">~By enabling extended notifications you will get the ability to reply to messages right in the notification. To achieve this your notifications will be processed in our cloud server. We don't store your notifications or provide access to third parties.</TextBlock>
+                                </StackPanel>
+                            </Flyout>
+                        </FlyoutBase.AttachedFlyout>
+                    <Run x:Uid="ExtendedNotificationsPrivacy"  Text="~This option enables interactive toast notifications and new tile templates." />
+                    <Hyperlink x:Name="ExtendedNotificationsPrivacyReadMoreHyperlink" Click="ExtendedNotificationsPrivacyReadMoreHyperlink_OnClick">
+                        <Run x:Uid="ExtendedNotificationsPrivacyReadMore" Text="~Read more"/>
+                    </Hyperlink>
+                </TextBlock>
+
+                <TextBlock x:Uid="SettingsInvisbileModeTitle" Text="~INVISIBLE MODE" Margin="0,20,0,10" FontWeight="SemiBold" FontSize="14" Typography.Capitals="SmallCaps" VerticalAlignment="Center"/>
+                
+                <StackPanel Margin="0,0,0,10" Visibility="{Binding HasAccessToInvisibleMode, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter=True}">
+                    <TextBlock x:Uid="SettingsInvisibleModeHint" Text="~To get access to this settings you should buy access to Invisible Mode" TextWrapping="WrapWholeWords" Opacity="0.6" FontSize="12"/>
+                    <Button x:Uid="SettingsBuyNowButton" Content="~Buy now" Margin="0,10,0,0" HorizontalAlignment="Left" Command="{Binding BuyInvisibleModeCommand}"/>
+                </StackPanel>
+
+                <ToggleSwitch x:Uid="SettingsHideOnlineSwitch" Header="~Hide online status" Margin="0,10,0,0" IsOn="False" IsEnabled="{Binding HasAccessToInvisibleMode}"/>
+                <TextBlock x:Uid="SettingsHideOnlineSwitchWarning" Text="~This feature is not available anymore because of changes on the VK.com." Foreground="Red" Margin="0,5,0,10" FontSize="12" TextWrapping="WrapWholeWords"/>
+
+                <ToggleSwitch x:Uid="SettingsMarkAsReadSwitch" Header="~Don't mark messages as read" Margin="0,20,0,0" IsOn="{Binding DontMarkMessagesAsRead, Mode=TwoWay}" IsEnabled="{Binding HasAccessToInvisibleMode}"/>
+
+                <TextBlock x:Uid="SettingsAboutTitle" Text="~ABOUT" Margin="0,20,0,10" FontWeight="Bold" FontSize="14" Typography.Capitals="SmallCaps" VerticalAlignment="Center"/>
+                <TextBlock Text="Colibri Universal App" FontSize="16" FontWeight="Normal"/>
+                <TextBlock FontSize="14" Opacity="0.6">
+                    <Run x:Uid="SettingsVersionTitle" Text="~Version" />
+                    <Run Text="{Binding Version, ElementName=rootElement}"/>
+                </TextBlock>
+                <TextBlock Text="Copyright © Artem Shuba 2017" Margin="0,0,0,10" FontSize="14" Opacity="0.6"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

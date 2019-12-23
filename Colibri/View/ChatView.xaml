@@ -1,0 +1,138 @@
+﻿<Page
+    x:Class="Colibri.View.ChatView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Colibri.Controls"
+    xmlns:debugData="using:Colibri.DebugData"
+    xmlns:converters="using:Colibri.Converters"
+    xmlns:commonControls="using:Jupiter.Controls"
+    mc:Ignorable="d"
+    NavigationCacheMode="Disabled"
+    x:Name="rootElement">
+
+    <Page.Resources>
+        <converters:MessageItemTemplateSelector x:Key="MessageItemTemplateSelector"
+                                                InboxTemplate="{StaticResource MessageInboxTemplate}"
+                                                OutboxTemplate="{StaticResource MessageOutboxTemplate}" 
+                                                ChatInboxTemplate="{StaticResource MessageInboxTemplate}"/>
+
+        <converters:MessageItemStyleSelector x:Key="MessageItemStyleSelector" MessageStyle="{StaticResource MessageListViewItemStyle}"
+                                             ServiceMessageStyle="{StaticResource MessageListViewServiceItemStyle}"/>
+
+        <DataTemplate x:Name="PhotoUploadTemplate">
+            <controls:AttachmentUploadPhotoControl Attachment="{Binding}" RemoveCommand="{Binding ElementName=rootElement, Path=DataContext.RemoveAttachmentCommand}"/>
+        </DataTemplate>
+
+        <DataTemplate x:Name="DocumentUploadTemplate">
+            <controls:AttachmentUploadDocumentControl Attachment="{Binding}" RemoveCommand="{Binding ElementName=rootElement, Path=DataContext.RemoveAttachmentCommand}"/>
+        </DataTemplate>
+
+        <DataTemplate x:Name="VideoUploadTemplate">
+            <controls:AttachmentUploadVideoControl Attachment="{Binding}" RemoveCommand="{Binding ElementName=rootElement, Path=DataContext.RemoveAttachmentCommand}"/>
+        </DataTemplate>
+
+        <DataTemplate x:Name="ForwardMessagesUploadTemplate">
+            <controls:AttachmentUploadForwardMessagesControl Attachment="{Binding}" RemoveCommand="{Binding ElementName=rootElement, Path=DataContext.RemoveAttachmentCommand}"/>
+        </DataTemplate>
+        
+        <converters:ChatAttachmentUploadTemplateSelector x:Key="AttachmentUploadTemplateSelector" PhotoTemplate="{StaticResource PhotoUploadTemplate}"
+                                                         DocumentTemplate="{StaticResource DocumentUploadTemplate}"
+                                                         VideoTemplate="{StaticResource VideoUploadTemplate}"
+                                                         ForwardsTemplate="{StaticResource ForwardMessagesUploadTemplate}"/>
+    </Page.Resources>
+
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition />
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!--<CommandBar Margin="0,20,0,0" Background="Transparent">
+                <CommandBar.SecondaryCommands>
+                    <AppBarButton Label="~View profile"/>
+                </CommandBar.SecondaryCommands>
+            </CommandBar>-->
+
+            <Button Margin="10,7,10,7" Style="{StaticResource SimpleButtonStyle}" Command="{Binding GoToUserProfileCommand}" HorizontalAlignment="Left">
+                <StackPanel>
+                    <TextBlock x:Name="UserName" Text="{Binding Title}" FontWeight="Bold" FontSize="16" Margin="10,0,0,0"
+                           TextTrimming="CharacterEllipsis"/>
+
+                    <TextBlock Text="{Binding UserOnlineStatus}" RelativePanel.Below="UserName" Margin="10,-4,0,0" FontSize="14" Opacity="0.6"/>
+                </StackPanel>
+            </Button>
+
+
+            <commonControls:LoadingIndicator Grid.Row="1" IsBusy="{Binding Operations[history].IsWorking}" Error="{Binding Operations[history].Error}">
+                <controls:ChatListView x:Name="ChatListView" DataContext="{Binding}" d:DataContext="{d:DesignInstance debugData:DebugConversationViewModel}" 
+                                   ItemsSource="{Binding Messages}" VerticalAlignment="Bottom" ItemContainerStyleSelector="{StaticResource MessageItemStyleSelector}"
+                                   ShowsScrollingPlaceholders="False" Padding="30,10,30,10" SelectionMode="None" IsItemClickEnabled="False"
+                                   ItemTemplateSelector="{StaticResource MessageItemTemplateSelector}" IsTabStop="False"
+                                   Loaded="ChatListView_OnLoaded">
+                    <controls:ChatListView.ItemContainerTransitions>
+                        <TransitionCollection />
+                    </controls:ChatListView.ItemContainerTransitions>
+                    <controls:ChatListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <ItemsStackPanel MaxWidth="750" />
+                        </ItemsPanelTemplate>
+                    </controls:ChatListView.ItemsPanel>
+                </controls:ChatListView>
+            </commonControls:LoadingIndicator>
+
+            <Grid x:Name="MessageBoxGrid" Grid.Row="2" MinHeight="48" BorderBrush="{ThemeResource SystemControlBackgroundChromeMediumBrush}" BorderThickness="0,1,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Uid="ChatAttachButton" Content="" Style="{StaticResource IconButtonStyle}" Margin="6,0,0,9" FontSize="18" ToolTipService.ToolTip="~Attach" VerticalAlignment="Bottom" IsTabStop="False">
+                    <Button.Flyout>
+                        <MenuFlyout>
+                            <MenuFlyoutItem x:Uid="ChatAttachMenuItemPhoto" Text="~Photo" Command="{Binding AttachPhotoCommand}"/>
+                            <MenuFlyoutItem x:Uid="ChatAttachMenuItemDocument" Text="~Document" Command="{Binding AttachDocumentCommand}"/>
+                            <MenuFlyoutItem x:Uid="ChatAttachMenuItemVideo" Text="~Video" Command="{Binding AttachVideoCommand}"/>
+                            <!--<MenuFlyoutItem x:Uid="ChatAttachMenuItemLocation" Text="~Location" Command="{Binding AttachLocationCommand}"/>-->
+                        </MenuFlyout>
+                    </Button.Flyout>
+                </Button>
+
+                <Grid x:Name="ChatTextBoxGrid" Grid.Column="1" MaxHeight="200" VerticalAlignment="Center" AllowDrop="True" DragEnter="ChatTextBoxGrid_OnDragEnter" Drop="ChatTextBoxGrid_OnDrop">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBox x:Uid="ChatTextBox" x:Name="MessageTextBox" Text="{Binding MessageToSend, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" BorderThickness="0" 
+                                 TextWrapping="Wrap" 
+                                 AcceptsReturn="True" PlaceholderText="~Write a message" Style="{StaticResource MessageBoxTextBoxStyle}"
+                                 KeyUp="MessageTextBox_OnKeyUp" TextChanging="MessageTextBox_OnTextChanging" Loaded="MessageTextBox_OnLoaded" Paste="MessageTextBox_OnPaste" Padding="10,3,36,5"/>
+                    <ScrollViewer Grid.Row="1" HorizontalScrollMode="Auto" HorizontalScrollBarVisibility="Hidden"
+                                  VerticalScrollBarVisibility="Disabled" VerticalScrollMode="Disabled" Visibility="{Binding AttachmentUploads, Converter={StaticResource IsEmptyToVisibilityConverter}}">
+                        <ItemsControl ItemsSource="{Binding AttachmentUploads}" Margin="10,0,0,5" ItemTemplateSelector="{StaticResource AttachmentUploadTemplateSelector}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Horizontal"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+                    </ScrollViewer>
+
+                    <Button x:Name="EmojiButton" Grid.Row="0" Style="{StaticResource IconButtonStyle}" Content="" HorizontalAlignment="Right" VerticalAlignment="Center">
+                        <Button.Flyout>
+                            <Flyout x:Name="EmojiFlyout">
+                                <controls:ChatSmilesControl EmojiChoosenEvent="ChatSmilesControl_OnEmojiChoosenEvent" StickerChoosenEvent="ChatSmilesControl_OnStickerChoosenEvent"/>
+                            </Flyout>
+                        </Button.Flyout>
+                    </Button>
+                </Grid>
+
+                <Button x:Uid="ChatSendButton" Grid.Column="2" Content="" Style="{StaticResource IconButtonStyle}" Margin="6,0,6,7" FontSize="18" ToolTipService.ToolTip="~Send" VerticalAlignment="Bottom"
+                        Command="{Binding SendMessageCommand}" IsTabStop="False"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
