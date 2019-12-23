@@ -1,0 +1,6 @@
+[submodule "VkLib"]
+	path = VkLib
+	url = https://github.com/artemshuba/VkLib
+[submodule "Jupiter"]
+	path = Jupiter
+	url = https://github.com/artemshuba/Jupiter
