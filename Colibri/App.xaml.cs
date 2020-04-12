@@ -99,7 +99,7 @@ namespace Colibri
             TileHelper.ClearTile();
         }
 
-        public override void OnUnhandledException(UnhandledExceptionEventArgs e)
+        public override void OnUnhandledException(Windows.UI.Xaml.UnhandledExceptionEventArgs e)
         {
             Logger.Fatal(e.Exception, e.Message);
         }

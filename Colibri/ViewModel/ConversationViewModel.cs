@@ -32,6 +32,7 @@ using VkLib.Error;
 using User = Colibri.Model.User;
 using Windows.UI.Xaml;
 using Jupiter.Application;
+using System.Globalization;
 
 namespace Colibri.ViewModel
 {
@@ -120,10 +121,12 @@ namespace Colibri.ViewModel
                 if (Dialog != null && Dialog.Message != null && Dialog.Message.ChatId != 0)
                 {
                     var count = Dialog.Message?.UsersCount ?? 0;
+                    var locale = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+
                     return count + " " +
                            StringHelper.LocalizeNumerals(count, Localizator.String("ConversationPersonSingular"),
                                Localizator.String("ConversationPersonDual"),
-                               Localizator.String("ConversationPersonPlural"));
+                               Localizator.String("ConversationPersonPlural"), locale);
                 }
 
                 if (Dialog?.User == null)

@@ -6,6 +6,7 @@ using Jupiter.Mvvm;
 using Jupiter.Utils.Helpers;
 using VkLib.Core.Messages;
 using VkLib.Core.Users;
+using System.Globalization;
 
 namespace Colibri.Model
 {
@@ -81,6 +82,7 @@ namespace Colibri.Model
                 return string.Empty;
 
             string result = string.Empty;
+            var locale = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
 
             if (!string.IsNullOrEmpty(Message.Body))
                 result = Message.Body;
@@ -94,17 +96,17 @@ namespace Colibri.Model
                 var count = Message.Attachments.Count;
 
                 if (count > 1 && Message.Attachments.Any(a => a.Type != first.Type))
-                    result = count + " " + StringHelper.LocalizeNumerals(count, Localizator.String("AttachmentsSingular"), Localizator.String("AttachmentsDual"), Localizator.String("AttachmentsPlural"));
+                    result = count + " " + StringHelper.LocalizeNumerals(count, Localizator.String("AttachmentsSingular"), Localizator.String("AttachmentsDual"), Localizator.String("AttachmentsPlural"), locale);
                 else
                 {
                     switch (first.Type)
                     {
                         case "audio":
-                            result = count + " " + StringHelper.LocalizeNumerals(count, Localizator.String("AudiosSingular"), Localizator.String("AudiosDual"), Localizator.String("AudiosPlural"));
+                            result = count + " " + StringHelper.LocalizeNumerals(count, Localizator.String("AudiosSingular"), Localizator.String("AudiosDual"), Localizator.String("AudiosPlural"), locale);
                             break;
 
                         case "photo":
-                            result = count + " " + StringHelper.LocalizeNumerals(count, Localizator.String("PhotosSingular"), Localizator.String("PhotosDual"), Localizator.String("PhotosPlural"));
+                            result = count + " " + StringHelper.LocalizeNumerals(count, Localizator.String("PhotosSingular"), Localizator.String("PhotosDual"), Localizator.String("PhotosPlural"), locale);
                             break;
 
                         case "sticker":
@@ -120,11 +122,11 @@ namespace Colibri.Model
                             break;
 
                         case "doc":
-                            result = count + " " + StringHelper.LocalizeNumerals(count, Localizator.String("DocumentsSingular"), Localizator.String("DocumentsDual"), Localizator.String("DocumentsPlural"));
+                            result = count + " " + StringHelper.LocalizeNumerals(count, Localizator.String("DocumentsSingular"), Localizator.String("DocumentsDual"), Localizator.String("DocumentsPlural"), locale);
                             break;
 
                         case "video":
-                            result = count + " " + StringHelper.LocalizeNumerals(count, Localizator.String("VideosSingular"), Localizator.String("VideosDual"), Localizator.String("VideosPlural"));
+                            result = count + " " + StringHelper.LocalizeNumerals(count, Localizator.String("VideosSingular"), Localizator.String("VideosDual"), Localizator.String("VideosPlural"), locale);
                             break;
 
                         case "wall":
@@ -132,7 +134,7 @@ namespace Colibri.Model
                             break;
 
                         default:
-                            result = count + " " + StringHelper.LocalizeNumerals(count, Localizator.String("AttachmentsSingular"), Localizator.String("AttachmentsDual"), Localizator.String("AttachmentsPlural"));
+                            result = count + " " + StringHelper.LocalizeNumerals(count, Localizator.String("AttachmentsSingular"), Localizator.String("AttachmentsDual"), Localizator.String("AttachmentsPlural"), locale);
                             break;
                     }
                 }
@@ -145,7 +147,7 @@ namespace Colibri.Model
 
             if (!Message.ForwardMessages.IsNullOrEmpty())
             {
-                result = Message.ForwardMessages.Count + " " + StringHelper.LocalizeNumerals(Message.ForwardMessages.Count, Localizator.String("DialogForwardedMessagesSingular"), Localizator.String("DialogForwardedMessagesDual"), Localizator.String("DialogForwardedMessagesPlural"));
+                result = Message.ForwardMessages.Count + " " + StringHelper.LocalizeNumerals(Message.ForwardMessages.Count, Localizator.String("DialogForwardedMessagesSingular"), Localizator.String("DialogForwardedMessagesDual"), Localizator.String("DialogForwardedMessagesPlural"), locale);
             }
 
             return result;

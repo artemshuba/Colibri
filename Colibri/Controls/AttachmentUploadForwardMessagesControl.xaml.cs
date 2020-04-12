@@ -5,6 +5,7 @@ using Windows.UI.Xaml.Controls;
 using Colibri.Helpers;
 using Colibri.Model;
 using Jupiter.Utils.Helpers;
+using System.Globalization;
 
 // The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
 
@@ -78,9 +79,11 @@ namespace Colibri.Controls
 
         private void UpdateCountTitle()
         {
+            var locale = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+
             MessagesCountTitle.Text = StringHelper.LocalizeNumerals(Attachment.Messages.Count,
                 Localizator.String("MessagesSingular"), Localizator.String("MessagesDual"),
-                Localizator.String("MessagesPlural")).ToLower();
+                Localizator.String("MessagesPlural"), locale).ToLower();
         }
     }
 }
