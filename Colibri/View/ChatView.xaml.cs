@@ -67,14 +67,16 @@ namespace Colibri.View
             base.OnNavigatingFrom(e);
         }
 
-        private void MessageTextBox_OnKeyUp(object sender, KeyRoutedEventArgs e)
+        private async void MessageTextBox_OnKeyDown(object sender, KeyRoutedEventArgs e)
         {
             if (e.Key == VirtualKey.Enter && (CoreWindow.GetForCurrentThread().GetKeyState(VirtualKey.Shift) & CoreVirtualKeyStates.Down) != CoreVirtualKeyStates.Down)
             {
                 //send message
                 ((ConversationViewModel)this.DataContext).SendMessageCommand.Execute(null);
+                e.Handled = true;
             }
         }
+
 
         private void ChatListView_OnLoaded(object sender, RoutedEventArgs e)
         {

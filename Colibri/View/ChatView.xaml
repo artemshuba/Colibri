@@ -107,9 +107,9 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <TextBox x:Uid="ChatTextBox" x:Name="MessageTextBox" Text="{Binding MessageToSend, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" BorderThickness="0" 
-                                 TextWrapping="Wrap" 
+                                 TextWrapping="Wrap"
                                  AcceptsReturn="True" PlaceholderText="~Write a message" Style="{StaticResource MessageBoxTextBoxStyle}"
-                                 KeyUp="MessageTextBox_OnKeyUp" TextChanging="MessageTextBox_OnTextChanging" Loaded="MessageTextBox_OnLoaded" Paste="MessageTextBox_OnPaste" Padding="10,3,36,5"/>
+                                 PreviewKeyDown="MessageTextBox_OnKeyDown" TextChanging="MessageTextBox_OnTextChanging" Loaded="MessageTextBox_OnLoaded" Paste="MessageTextBox_OnPaste" Padding="10,3,36,5"/>
                     <ScrollViewer Grid.Row="1" HorizontalScrollMode="Auto" HorizontalScrollBarVisibility="Hidden"
                                   VerticalScrollBarVisibility="Disabled" VerticalScrollMode="Disabled" Visibility="{Binding AttachmentUploads, Converter={StaticResource IsEmptyToVisibilityConverter}}">
                         <ItemsControl ItemsSource="{Binding AttachmentUploads}" Margin="10,0,0,5" ItemTemplateSelector="{StaticResource AttachmentUploadTemplateSelector}">
