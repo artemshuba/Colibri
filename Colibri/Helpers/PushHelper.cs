@@ -28,9 +28,9 @@ namespace Colibri.Helpers
                 await ServiceLocator.Vkontakte.Account.UnregisterDevice(DeviceHelper.GetDeviceId());
 
                 //TODO временно отключено, т.к. сервак лежит
-                string token = AppSettings.EnableExtendedNotifications
+                string token = /*AppSettings.EnableExtendedNotifications
                     ? "http://colibri.mswin.me/api/push?channel=" + _notificationChannel.Uri
-                    : _notificationChannel.Uri;
+                    :*/ _notificationChannel.Uri;
 
                 var result = await ServiceLocator.Vkontakte.Account.RegisterDevice(token, deviceId: DeviceHelper.GetDeviceId(), systemVersion: DeviceHelper.GetOsVersion(),
                            settings: new VkPushSettings()

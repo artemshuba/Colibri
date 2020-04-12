@@ -35,7 +35,7 @@
 
                 <ToggleSwitch x:Uid="SettingsNotificationsSwitch" Header="~Message notifications" Margin="0,20,0,0" IsOn="{Binding EnableNotifications, Mode=TwoWay}"/>
 
-                <ToggleSwitch x:Uid="SettingsExtendedNotificationsSwitch" Header="~Extended notifications" Margin="0,20,0,0" IsOn="{Binding EnableExtendedNotifications, Mode=TwoWay}"/>
+                <!--<ToggleSwitch x:Uid="SettingsExtendedNotificationsSwitch" Header="~Extended notifications" Margin="0,20,0,0" IsOn="{Binding EnableExtendedNotifications, Mode=TwoWay}"/>
                 
                 <TextBlock x:Name="ExtendedNotificationsPrivacyTextBlock" TextWrapping="Wrap" FontSize="12" Opacity="0.6">
                     <FlyoutBase.AttachedFlyout>
@@ -50,7 +50,7 @@
                     <Hyperlink x:Name="ExtendedNotificationsPrivacyReadMoreHyperlink" Click="ExtendedNotificationsPrivacyReadMoreHyperlink_OnClick">
                         <Run x:Uid="ExtendedNotificationsPrivacyReadMore" Text="~Read more"/>
                     </Hyperlink>
-                </TextBlock>
+                </TextBlock>-->
 
                 <TextBlock x:Uid="SettingsInvisbileModeTitle" Text="~INVISIBLE MODE" Margin="0,40,0,10" FontWeight="SemiBold" FontSize="14" Typography.Capitals="SmallCaps" VerticalAlignment="Center"/>
 
